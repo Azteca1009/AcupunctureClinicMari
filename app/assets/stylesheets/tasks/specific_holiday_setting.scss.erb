@@ -1,0 +1,206 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*特別休日指定フォーム***************/
+.mod-mainContent {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.specific_holiday_setting-h .ja {
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.15em;
+}
+.mod-form {
+  background: #ecf7fb;
+  margin-bottom: 30px;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.mod-form .must {
+  color: #1ba1e6;
+}
+.mod-form-table {
+  display: block;
+  margin-bottom: 30px;
+}
+.mod-form-table tr {
+  margin-bottom: 2em;
+}
+.mod-form-table th {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+.mod-form-table tbody, .mod-form-table tr, .mod-form-table th, .mod-form-table td {
+  display: block;
+}
+input:focus {
+  background: #eaf4fc;
+}
+textarea:focus {
+  background: #eaf4fc;
+}
+/*特別休日一覧***************/
+.specifics_table {
+  width: 100%;
+}
+.specifics_title {
+  border-bottom: 1px solid #E1E5E7;
+}
+.specifics_table td {
+  border-bottom: 1px solid #E1E5E7;
+}
+.specifics_table th {
+  text-align: center;
+  font-weight: bold;
+}
+.specifics_table td {
+  text-align: center;
+}
+.specifics_content:hover {
+  background-color: #fff0f5;
+}
+.delete_btn {
+  margin: 2px;
+  color: #fff;
+  background-color: #87CEEB;
+  float: right;
+}
+.delete_btn:hover {
+  background-color: #1ba1e6;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*特別休日指定フォーム***************/
+  .specific_holiday_setting-h {
+    margin-top: 150px;
+  }
+
+  .specific_holiday_setting-h .ja {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .mod-form {
+    padding: 50px;
+  }
+  .mod-form-table {
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  .mod-btn01 {
+    font-size: 1.2rem;
+  }
+  /*特別休日一覧***************/
+  .specifics_table th {
+    font-size: 1.3rem;
+  }
+  .specifics_table td {
+    font-size: 1.3rem;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*特別休日指定フォーム***************/
+  .specific_holiday_setting-h {
+    margin-top: 150px;
+  }
+
+  .specific_holiday_setting-h .ja {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .mod-form {
+    padding: 50px;
+  }
+  .mod-form-table {
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  .mod-btn01 {
+    font-size: 1.2rem;
+  }
+  /*特別休日一覧***************/
+  .specifics_table th {
+    font-size: 1.3rem;
+  }
+  .specifics_table td {
+    font-size: 1.3rem;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*特別休日指定フォーム***************/
+  .specific_holiday_setting-h {
+    margin-top: 100px;
+  }
+
+  .specific_holiday_setting-h .ja {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .mod-form {
+    padding: 50px;
+  }
+  .mod-form-table {
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  .mod-btn01 {
+    font-size: 1.2rem;
+  }
+  /*特別休日一覧***************/
+  .specifics_table th {
+    font-size: 1.1rem;
+  }
+  .specifics_table td {
+    font-size: 1.1rem;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*特別休日指定フォーム***************/
+  .specific_holiday_setting-h {
+    margin-top: 50px;
+  }
+
+  .specific_holiday_setting-h .ja {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  .mod-form {
+    padding: 20px;
+  }
+  .mod-form-table {
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  .mod-btn01 {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  /*特別休日一覧***************/
+  .specifics_table th {
+    font-size: 1.0rem;
+  }
+  .specifics_table td {
+    font-size: 1.0rem;
+  }
+}

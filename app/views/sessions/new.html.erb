@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "contact/contact", :media => "all" %>
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <h2 class="contact-h">
+      <span class="ja">
+        ログイン
+      </span>
+    </h2>
+    <div class="contact_form_input">
+      <div class="mod-form">
+      <%= form_for(:session, url: login_path) do |f| %>
+        <table class="mod-form-table">
+          <tbody>
+            <tr>
+              <th><%= f.label :email %><span class="must">※必須</span></th>
+              <td>
+                <%= f.email_field :email, :class => 'u-input size-100p', :size => '60', :inputmode =>'email', :placeholder => "例：MariAcupuncture@example.com", :required => true %>
+              </td>
+            </tr>
+            <tr>
+              <th><%= f.label :password %><span class="must">※必須</span></th>
+              <td>
+                <%= f.password_field :password, :class => 'u-input size-100p', :size => '60' %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mod-btns1col">
+          <div class="mod-btns1col-item">
+            <%= f.submit 'Log in', :class => 'btn btn-primary mod-btn01 u-bg-c1 u-c-wh' %>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

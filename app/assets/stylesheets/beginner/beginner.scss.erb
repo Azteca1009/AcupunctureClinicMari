@@ -1,0 +1,232 @@
+// Place all the styles related to the beginner controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mod-keyvisualHead {
+  background-image: url("<%= asset_path('beginner/beginner_image_01.jpg') %>");
+}
+/*鍼灸治療とは***************/
+.beginner-what-is {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.beginner-what-is-h .ja {
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.15em;
+}
+/*その答え(answer)***************/
+.beginner-what-is-answer {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.beginner-what-is-answer-bluelite {
+  background-color: #D9EEF7;
+}
+.beginner-what-is-answer-blue {
+  background-color: #BDD7EE;
+}
+.beginner-what-is-answer-img p {
+  background-color: #fff;
+  font-weight: bold;
+  padding: 0 3px;
+}
+.beginner-what-is-answer-contents {
+  text-align: left;
+  font-weight: 500;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*鍼灸治療とは***************/
+  .beginner-what-is {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .beginner-what-is-h .ja {
+    font-size: 1.5rem;
+  }
+  .beginner-what-is-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  /*その答え(answer)***************/
+  .beginner-what-is-answer-bluelite {
+    padding: 30px 0 120px 100px;
+    margin-right: 8em;
+    position: relative;
+  }
+  .beginner-what-is-answer-blue {
+    padding: 30px 0 120px 100px;
+    margin-left: 8em;
+    position: relative;
+  }
+  .beginner-what-is-answer-img {
+    width: 46%;
+    position: relative;
+  }
+  .beginner-what-is-answer-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .beginner-what-is-answer-contents {
+    text-align: left;
+    background-color: #fff;
+    width: 60%;
+    line-height: 1.5;
+    padding: 10px;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*鍼灸治療とは***************/
+  .beginner-what-is {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .beginner-what-is-h .ja {
+    font-size: 1.5rem;
+  }
+  .beginner-what-is-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  /*その答え(answer)***************/
+  .beginner-what-is-answer-bluelite {
+    padding: 30px 0 120px 100px;
+    margin-right: 8em;
+    position: relative;
+  }
+  .beginner-what-is-answer-blue {
+    padding: 30px 0 120px 100px;
+    margin-left: 8em;
+    position: relative;
+  }
+  .beginner-what-is-answer-img {
+    width: 46%;
+    position: relative;
+  }
+  .beginner-what-is-answer-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .beginner-what-is-answer-contents {
+    text-align: left;
+    width: 60%;
+    background-color: #fff;
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 10px;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*鍼灸治療とは***************/
+  .beginner-what-is {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .beginner-what-is-h .ja {
+    font-size: 1.5rem;
+  }
+  .beginner-what-is-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  /*その答え(answer)***************/
+  .beginner-what-is-answer-bluelite {
+    padding: 30px 0 120px 100px;
+    margin-right: 5em;
+    position: relative;
+  }
+  .beginner-what-is-answer-blue {
+    padding: 30px 0 120px 100px;
+    margin-left: 5em;
+    position: relative;
+  }
+  .beginner-what-is-answer-img {
+    width: 46%;
+    position: relative;
+  }
+  .beginner-what-is-answer-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .beginner-what-is-answer-contents {
+    text-align: left;
+    width: 60%;
+    background-color: #fff;
+    line-height: 1.2;
+    padding: 10px;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+  }
+
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*鍼灸治療とは***************/
+  .beginner-what-is {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .beginner-what-is-h .ja {
+    font-size: 1.5rem;
+  }
+  .beginner-what-is-content {
+    padding: 20px 0 50px;
+    font-weight: 500;
+  }
+  /*その答え(answer)***************/
+  .beginner-what-is-answer-bluelite {
+    position: relative;
+    margin: 2em 0;
+  }
+  .beginner-what-is-answer-blue {
+    position: relative;
+    margin: 2em 0;
+  }
+
+  .beginner-what-is-answer-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .beginner-what-is-answer-contents {
+    display: block;
+    text-align: left;
+    background-color: #fff;
+    padding: 1em;
+  }
+}

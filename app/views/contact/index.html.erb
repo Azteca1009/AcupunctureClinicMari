@@ -1,0 +1,111 @@
+<%= stylesheet_link_tag "contact/contact", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-keyvisualHead align-lb u-c-wh">
+  <h1 class="mod-keyvisualHead-txts">
+    お問い合わせ
+  </h1>
+</div>
+<%# パンくずリスト %>
+<nav class="mod-breadcrumb">
+  <ol class="mod-breadcrumb-links lapctbOnly">
+    <li><%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %></li>
+    <li>お問い合わせ</li>
+  </ol>
+</nav>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <h2 class="contact-h">
+      <span class="ja">
+        当院へのご相談やお問い合わせについて
+      </span>
+    </h2>
+    <%# お問い合わせフォーム %>
+    <div class="contact_form_input">
+      <%= form_for @contact, :class => 'contact-form-input-post', :url => contact_confirm_path do |f| %>
+        <div class="mod-form">
+          <%# 入力エラー %>
+          <% if @contact.errors.any? %>
+          <div class="alert alert-danger" role="alert">
+            <ul>
+              <% @contact.errors.each do |attr, msg| %>
+                <li class="u-c-rd wei-bold"><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+          <table class="mod-form-table">
+            <tbody>
+              <tr>
+                <th>お名前<span class="must">※必須</span></th>
+                <td>
+                  <%= f.text_field :name, :class => 'u-input size-100p', :size => '60', :placeholder => "例：出雲 太郎", :required => true %>
+                </td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td>
+                  <%= f.telephone_field :tel, :class => 'u-input size-100p', :size => '60', :inputmode =>'tel', :placeholder => "例：08012345678" %>
+                </td>
+              </tr>
+              <tr>
+                <th>メールアドレス<span class="must">※必須</span></th>
+                <td>
+                  <%= f.email_field :email, :class => 'u-input size-100p', :size => '60', :inputmode =>'email', :placeholder => "例：MariAcupuncture@example.com", :required => true %>
+                </td>
+              </tr>
+              <tr>
+                <th>ご年齢</th>
+                <td>
+                  <%= f.number_field :age, :class => 'u-input size-100p', :size => '60', :min => 1, :max => 100, :pattern =>'\d*', :placeholder => "例：40" %>
+                </td>
+              </tr>
+              <tr>
+                <th>ご相談内容<span class="must">※必須</span></th>
+                <td>
+                  <%= f.text_area :comment, :class => 'u-input size-100p', :cols => '50', :rows => '10', :required => true %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mod-form-btns">
+            <div class="mod-btns1col u-mb-1e">
+              <div class="mod-btns1col-item"></div>
+            </div>
+            <div class="mod-btns1col">
+              <div class="mod-btns1col-item">
+                <%= f.submit '送信内容確認', class: 'btn btn-primary mod-btn01 u-bg-c1 u-c-wh' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%# お問い合わせフォームへ %>
+  <section class="u-mb-2e">
+    <div class="wrapin wrapin-sp">
+      <div class="mod-contactLinks">
+        <div class="mod-contactLinks-item is-tel">
+          <a href="tel:080-xxxx-xxxx">
+            <dl>
+              <dt>
+                <i><%= image_tag 'header/ico_tel_bu.svg' %></i>
+                080-xxxx-xxxx
+              </dt>
+              <dd>お急ぎの場合はお電話で</dd>
+            </dl>
+          </a>
+        </div>
+        <div class="mod-contactLinks-item is-mail">
+          <a href="/contact" data-turbolinks="false">
+            <dl>
+              <dt>メールによるご予約</dt>
+              <dd>まずはお気軽にご連絡ください</dd>
+            </dl>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

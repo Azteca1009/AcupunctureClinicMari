@@ -1,0 +1,325 @@
+// Place all the styles related to the beginner controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mod-keyvisualHead {
+  background-image: url("<%= asset_path('procedure-flow/procedure-flow_image_01.jpg') %>");
+}
+/*鍼灸に関するご相談/施術の流れ***************/
+.procedure-flow-item {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.procedure-flow-item-info-h .ja {
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.15em;
+}
+.procedure-flow-item-info-program {
+  margin-top: 1em;
+  font-weight: 500;
+}
+/*施術の流れ***************/
+// .procedure-flow-counseling-sec-txts {
+//   background: #ecf7fb;
+// }
+.procedure-flow-counseling-sec-h {
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.procedure-flow-counseling-sec-txt {
+  font-weight: 500;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.procedure-flow-counseling-sec-img {
+  background: url() center no-repeat;
+  background-size: cover;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.item01 .procedure-flow-counseling-sec-img {
+  background-image: url("<%= asset_path('procedure-flow/item01.jpg') %>");
+}
+.item02 .procedure-flow-counseling-sec-img {
+  background-image: url("<%= asset_path('procedure-flow/item02.jpg') %>");
+}
+.item03 .procedure-flow-counseling-sec-img {
+  background-image: url("<%= asset_path('procedure-flow/item03.jpg') %>");
+}
+.item04 .procedure-flow-counseling-sec-img {
+  background-image: url("<%= asset_path('procedure-flow/item04.jpg') %>");
+}
+/*施術後の注意***************/
+.procedure-flow-caution {
+  background: #ecf7fb;
+}
+.procedure-flow-caution-head {
+  text-align: center;
+}
+.procedure-flow-caution-h .en {
+  font-weight: bold;
+  display: block;
+  color: #1ba1e6;
+}
+.procedure-flow-caution-h .ja {
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.15em;
+}
+.procedure-flow-caution-ul {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.procedure-flow-caution-list::before {
+  content:  "〇";
+  display:  inline-block;
+  position:  relative;
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*鍼灸に関するご相談/施術の流れ***************/
+  .procedure-flow-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .procedure-flow-item-info {
+    width: 35%;
+  }
+  .procedure-flow-item-info-h .ja {
+    font-size: 1.5rem;
+  }
+  .procedure-flow-item-img {
+    width: 60%;
+  }
+  /*施術の流れ***************/
+  .procedure-flow-counseling-sec:nth-child(2n+1) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .procedure-flow-counseling-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 100px;
+    }
+  .procedure-flow-counseling-sec-txts {
+    width: 60%;
+    padding: 70px 40px;
+  }
+  .procedure-flow-counseling-sec-h {
+    font-size: 1.5rem;
+  }
+  .procedure-flow-counseling-sec-img {
+    width: 40%;
+  }
+  /*施術後の注意***************/
+  .procedure-flow-caution {
+    padding-bottom: 70px;
+  }
+  .procedure-flow-caution-head {
+    padding: 50px 0;
+  }
+  .procedure-flow-caution-h .ja {
+    padding-top: 15px;
+    font-size: 1.7em;
+  }
+  .procedure-flow-caution-ul {
+    line-height: 3;
+  }
+  .procedure-flow-caution-list {
+    margin-bottom: 30px;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*鍼灸に関するご相談/施術の流れ***************/
+  .procedure-flow-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .procedure-flow-item-info {
+    width: 35%;
+  }
+  .procedure-flow-item-info-h .ja {
+    font-size: 1.5rem;
+  }
+  .procedure-flow-item-img {
+    width: 60%;
+  }
+  /*施術の流れ***************/
+  .procedure-flow-counseling-sec:nth-child(2n+1) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .procedure-flow-counseling-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 100px;
+  }
+  .procedure-flow-counseling-sec-txts {
+    width: 60%;
+    padding: 70px 40px;
+  }
+  .procedure-flow-counseling-sec-h {
+    font-size: 1.5rem;
+  }
+  .procedure-flow-counseling-sec-img {
+    width: 40%;
+  }
+  /*施術後の注意***************/
+  .procedure-flow-caution {
+    padding-bottom: 70px;
+  }
+  .procedure-flow-caution-head {
+    padding: 50px 0;
+  }
+  .procedure-flow-caution-h .ja {
+    padding-top: 15px;
+    font-size: 1.7em;
+  }
+  .procedure-flow-caution-ul {
+    line-height: 2.6;
+  }
+  .procedure-flow-caution-list {
+    margin-bottom: 30px;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*鍼灸に関するご相談/施術の流れ***************/
+  .procedure-flow-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .procedure-flow-item-info {
+    width: 35%;
+  }
+  .procedure-flow-item-info-h .ja {
+    font-size: 1.5rem;
+  }
+  .procedure-flow-item-img {
+    width: 60%;
+  }
+  /*施術の流れ***************/
+  .procedure-flow-counseling-sec:nth-child(2n+1) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .procedure-flow-counseling-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .procedure-flow-counseling-sec-txts {
+    width: 60%;
+    padding: 70px 40px;
+  }
+  .procedure-flow-counseling-sec-h {
+    font-size: 1.5rem;
+  }
+  .procedure-flow-counseling-sec-img {
+    width: 40%;
+  }
+  /*施術後の注意***************/
+  .procedure-flow-caution {
+    padding-bottom: 70px;
+  }
+  .procedure-flow-caution-head {
+    padding: 50px 0;
+  }
+  .procedure-flow-caution-h .ja {
+    padding-top: 15px;
+    font-size: 1.7em;
+  }
+  .procedure-flow-caution-ul {
+    line-height: 2.4;
+  }
+  .procedure-flow-caution-list {
+    margin-bottom: 30px;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*鍼灸に関するご相談/施術の流れ***************/
+  .procedure-flow-item {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .procedure-flow-item-info {
+    margin-bottom: 2em;
+  }
+  .procedure-flow-item-info-h .ja {
+    font-size: 1.2rem;
+  }
+  /*施術の流れ***************/
+  .procedure-flow-counseling-sec-txts {
+    padding: 40px 20px;
+  }
+  .procedure-flow-counseling-sec-h {
+    font-size: 1.2rem;
+  }
+  .procedure-flow-counseling-sec-img {
+    height: 60vw;
+  }
+  /*施術後の注意***************/
+  .procedure-flow-caution {
+    padding-bottom: 30px;
+  }
+  .procedure-flow-caution-head {
+    padding: 40px 0 30px;
+  }
+  .procedure-flow-caution-h .ja {
+    padding-top: 15px;
+    font-size: 1.3em;
+  }
+  .procedure-flow-caution-list {
+    margin-bottom: 15px;
+  }
+}

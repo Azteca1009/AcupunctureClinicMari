@@ -1,0 +1,89 @@
+<%= stylesheet_link_tag "beginner/self-introduction", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-keyvisualHead align-lb u-c-wh">
+  <h1 class="mod-keyvisualHead-txts">
+    あなたの健康、この「手」で守ります。
+  </h1>
+</div>
+<%# パンくずリスト %>
+<nav class="mod-breadcrumb">
+  <ol class="mod-breadcrumb-links lapctbOnly">
+    <li><%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %></li>
+    <li><%= link_to "はじめての方へ", '/beginner', data: {"turbolinks" => false} %></li>
+    <li>施術者紹介</li>
+  </ol>
+</nav>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <div class="beginner-self-introduction wrapin wrapin-sp">
+    <h2 class="beginner-self-introduction-h">
+      <span class="ja">
+        初めまして、先久万里です。
+      </span>
+    </h2>
+    <div class="beginner-self-introduction-content">
+      お体の不調は日常生活を送るうえで、大きな問題です。<br>
+      お仕事や家事、学業やスポーツなど、やりたい事や、やらなければならいことがたくさんあるのに、<br>
+      身体の不調のせいで思うようにできないことはありませんか？<br>
+      身体の痛みやつらさでイライラしたり、落ち込んでしまうこともあるかもしれません。<br>
+      そんな皆様の不安や不満を解消するお手伝いができる治療です。<br>
+      <br>
+      私自身、肩こりからくる頭痛のせいでやりたいことが思うようにできなかったり、せっかくの休日を楽しく過ごせない時もありました。<br>
+      時々でてくる股関節の違和感のせいで、買い物を早めに切り上げたこともありました。<br>
+      また、幼少期から両親が身体の不調を訴えているのを聞いて、何とかしてあげられないだろうかと思っていました。<br>
+      このような経験が、私が鍼灸師になった理由でもあります。<br>
+      <br>
+      私が北京堂の治療と出会ったのは、鍼灸師として仕事を始めて４年目のことでした。<br>
+      鍼灸治療と一言にいっても色々な方法や流派などがあり、自分が患者様に対しこれからどのような治療をしていくべきか、悩んでいた時でした。<br>
+      そんな時、北京堂の治療を受けたことのある、専門学校の同級生が淺野先生を紹介してくれたのです。<br>
+      <br>
+      北京堂本店で北京堂淺野式の治療方法を初めて見たときは、インナーマッスルにまで届く深鍼、鍼の太さ、鍼の本数の多さ、
+      置鍼時間（鍼を打ったまま置いておく時間）のながさなど、今まで自分が行っていた治療との違いに驚きました。<br>
+      <br>
+      しかし、鍼灸院に訪れる方の多くが悩んでいるであろう、身体の痛みに対しての治療効果の高さを実際に自分の目で見られたことと、
+      私自身のつらい症状を治療するのにとても効果のある治療方法だったため、淺野先生にお願いし北京堂淺野式の治療方法を教えていただきました。<br>
+      <br>
+      その後、淺野先生の紹介もあり北京堂を紹介してくれた同級生と一緒に、東京都世田谷区で北京堂経堂を開院しました。<br>
+      経堂では、院長として施術を行い、また、淺野先生のお休みの日には
+      <span><%= link_to "[北京堂本店]", 'http://pekindou.c.ooco.jp/CM.htm', target: '_blank', class:"u-c-c1" %></span>
+      <span><%= link_to "[北京堂レディース]", 'http://www13.plala.or.jp/racyan/', target: '_blank', class:"u-c-c1" %></span>
+      の患者様の治療も担当していました。<br>
+      <br>
+      その後、２０１７年３月に北京堂松江の吉村院長が地元に戻られるということで、代わりに院長を務めさせていただきました。<br>
+      <br>
+      現在は、結婚を機に住居を出雲市に移し２０２１年３月にこのまり鍼灸院を開業させていただいております。<br>
+      <br>
+      ちなみに一緒に開業していた同級生は現在沖縄で
+      <span><%= link_to "[承治堂しょうちどう]", 'http://hari.okinawa/', target: '_blank', class:"u-c-c1" %></span>
+      を開業しています。<br>
+      <br>
+      みなさまがお身体の不調に悩まされることなく、楽しい毎日を送れるようにお手伝いさせていただきます。<br>
+      よろしくお願いします。
+    </div>
+  </div>
+  <section class="u-mb-2e">
+    <div class="wrapin wrapin-sp">
+      <div class="mod-contactLinks">
+        <div class="mod-contactLinks-item is-tel">
+          <a href="tel:080-xxxx-xxxx">
+            <dl>
+              <dt>
+                <i><%= image_tag 'header/ico_tel_bu.svg' %></i>
+                080-xxxx-xxxx
+              </dt>
+              <dd>お急ぎの場合はお電話で</dd>
+            </dl>
+          </a>
+        </div>
+        <div class="mod-contactLinks-item is-mail">
+          <a href="/contact" data-turbolinks="false">
+            <dl>
+              <dt>メールによるご予約</dt>
+              <dd>まずはお気軽にご連絡ください</dd>
+            </dl>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sunday: 1
+  monday: 1
+  tuesday: 1
+  wednesday: 1
+  thursday: 1
+  friday: 1
+  saturday: 1
+
+two:
+  sunday: 1
+  monday: 1
+  tuesday: 1
+  wednesday: 1
+  thursday: 1
+  friday: 1
+  saturday: 1

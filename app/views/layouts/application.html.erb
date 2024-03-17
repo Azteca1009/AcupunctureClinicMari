@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AcupunctureClinicMari</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'common_media', media: 'all' %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <script type="module">
+      import "initializers";
+    </script>
+    <div id="wrapper">
+      <%# 共通ヘッダー %>
+      <header class="mod-header">
+        <div class="mod-header-name">
+          <%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %>
+        </div>
+        <div class="mod-header-top">
+          <div class="mod-header-h">
+            島根県出雲市の鍼灸治療院　まり鍼灸院
+          </div>
+          <ul class="mod-header-links">
+            <li class="mod-header-links-item is-tel">
+              <a href="tel:080-xxxx-xxxx">
+                <div>
+                  <%= image_tag 'header/ico_tel_bu.svg' %>
+                  <span class="lapctbOnly">080-xxxx-xxxx</span>
+                  <span class="spOnly">お電話</span>
+                </div>
+              </a>
+            </li>
+            <li class="mod-header-links-item is-access">
+              <a href="https://goo.gl/maps/aVVJZgkPBMtumaoB9" target="_blank">
+                <div>
+                  <%= image_tag 'header/ico_pin_c1.svg' %>
+                  <span>アクセス</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="mod-gnav">
+          <div class="mod-gnav-scroll">
+            <div class="mod-gnav-logo">
+              <%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %>
+            </div>
+            <ul class="mod-gnav-links">
+              <li class="mod-gnav-links-item">
+                <div class="mod-gnav-foldingBtn beginner">
+                  <%= link_to "はじめての方へ", beginner_path, data: {"turbolinks" => false} %>
+                  <div class="mod-gnav-foldingBtn-btn" data-name="＋"></div>
+                </div>
+                <ul class="mod-gnav-links2nd">
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "鍼灸治療とは", beginner_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "当院で使用している鍼について", root_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "ご来院にあたって", beginner_visit_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "施術者紹介", beginner_self_introduction_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mod-gnav-links-item stream">
+                <%= link_to "施術のながれ", procedure_flow_path, data: {"turbolinks" => false} %>
+              </li>
+              <li class="mod-gnav-links-item">
+                <div class="mod-gnav-foldingBtn policy">
+                  <%= link_to "治療方針", treatment_policy_path, data: {"turbolinks" => false} %>
+                  <div class="mod-gnav-foldingBtn-btn" data-name="＋"></div>
+                </div>
+                <ul class="mod-gnav-links2nd">
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "こんな症状にお悩みなら", treatment_policy_faq_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "ライフスタイルに合わせた治療方針", treatment_policy_lifestyle_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-gnav-links2nd-item">
+                    <%= link_to "痛い鍼はヘタなのか", treatment_policy_reverberation_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mod-gnav-links-item charge">
+                <%= link_to "料金一覧", root_path, data: {"turbolinks" => false} %>
+              </li>
+              <li class="mod-gnav-links-item inquiry">
+                <%= link_to "お問い合わせ", contact_path, data: {"turbolinks" => false} %>
+              </li>
+            </ul>
+            <ul class="mod-megaNav-cats">
+              <li class="mod-megaNav-cats-item">
+                <p class="mod-megaNav-largeLink">
+                  <%= link_to "はじめての方へ", beginner_path, data: {"turbolinks" => false} %>
+                </p>
+                <ul class="mod-megaNav-links2nd">
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "鍼灸治療とは", beginner_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "当院で使用している鍼について", root_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "ご来院にあたって", beginner_visit_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "施術者紹介", beginner_self_introduction_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mod-megaNav-cats-item">
+                <p class="mod-megaNav-largeLink">
+                  <%= link_to "施術のながれ", procedure_flow_path, data: {"turbolinks" => false} %>
+                </p>
+                <ul class="mod-megaNav-links2nd">
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "施術のながれ", procedure_flow_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mod-megaNav-cats-item">
+                <p class="mod-megaNav-largeLink">
+                  <%= link_to "治療方針", treatment_policy_path, data: {"turbolinks" => false} %>
+                </p>
+                <ul class="mod-megaNav-links2nd">
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "こんな症状にお悩みなら", treatment_policy_faq_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "ライフスタイルに合わせた治療方針", treatment_policy_lifestyle_path, data: {"turbolinks" => false} %>
+                  </li>
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "痛い鍼はヘタなのか", treatment_policy_reverberation_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mod-megaNav-cats-item">
+                <p class="mod-megaNav-largeLink">
+                  <%= link_to "料金一覧", root_path, data: {"turbolinks" => false} %>
+                </p>
+                <ul class="mod-megaNav-links2nd">
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "料金一覧", root_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mod-megaNav-cats-item">
+                <p class="mod-megaNav-largeLink">
+                  <%= link_to "お問い合わせ", contact_path, data: {"turbolinks" => false} %>
+                </p>
+                <ul class="mod-megaNav-links2nd">
+                  <li class="mod-megaNav-links2nd-item">
+                    <%= link_to "お問い合わせ", contact_path, data: {"turbolinks" => false} %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="mod-gnav-tel">
+              <a href="tel:080-xxxx-xxxx" style="text-decoration: none;">
+                <i>
+                  <%= image_tag 'header/ico_tel_wh.svg' %>
+                </i>
+                <span>080-xxxx-xxxx</span>
+              </a>
+            </p>
+          </div>
+          <div class="mod-gnav-close">
+            <%= image_tag 'header/ico_cross_wh.svg' %>
+          </div>
+        </nav>
+        <ul class="mod-header-contactLinks">
+          <li class="mod-header-contactLinks-item item-gnavBtn">
+            <div class="mod-gnav-btn">
+              <div class="mod-gnav-btn-lines">
+                <div class="mod-gnav-btn-lines-item"></div>
+                <div class="mod-gnav-btn-lines-item"></div>
+                <div class="mod-gnav-btn-lines-item"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </header>
+    <%= yield %>
+      <section class="mod-footerContact">
+        <div class="mod-footerContact-head">
+          <h2 class="mod-footerContact-h">
+            <span class="en">CONTACT</span>
+            <span class="ja">ご相談・初診のご予約はお気軽に</span>
+          </h2>
+        </div>
+      </section>
+      <footer class="mod-footer">
+        <div class="wrapin wrapin-sp">
+          <div class="mod-footer-head">
+            <div class="mod-footer-col1st">
+              <dl class="mod-footer-info">
+                <dt class="mod-footer-info-h">
+                  まり鍼灸院
+                </dt>
+                <dd class="mod-footer-info-address">
+                  〒６９９－０７３２<br>
+                  島根県出雲市大社町入南３７０－１<br>
+                  一畑電車遥堪駅より徒歩１０分
+                </dd>
+                <dd class="mod-footer-info-tel">
+                  <a href="tel:080-xxxx-xxxx">
+                    <div>
+                      <%= image_tag 'header/ico_tel_bu.svg' %>
+                      <span>080-xxxx-xxxx</span>
+                    </div>
+                  </a>
+                </dd>
+              </dl>
+            </div>
+            <div class="mod-footer-col2nd">
+              <ul class="mod-btns2ndCol u-mb-20">
+                <li class="mod-btns2ndCol-item">
+                  <a href="https://goo.gl/maps/aVVJZgkPBMtumaoB9" target="_blank" class="mod-btn01 bd-c1 u-c-c1">
+                    Google Map
+                  </a>
+                </li>
+              </ul>
+              <table class="mod-schedule-table">
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                    <th>日</th>
+                  </tr>
+                  <tr>
+                    <td class="tal">9:30 - 13:00</td>
+                    <% if @calenderHolidaySchedule[:monday] == 1 or @calenderHolidaySchedule[:monday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:tueday] == 1 or @calenderHolidaySchedule[:tueday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:wendnesday] == 1 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:thursday] == 1 or @calenderHolidaySchedule[:thursday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:friday] == 1 or @calenderHolidaySchedule[:friday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:saturday] == 1 or @calenderHolidaySchedule[:saturday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:sunday] == 1 or @calenderHolidaySchedule[:sunday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                  </tr>
+                  <tr>
+                    <td class="tal">14:30 - 19:00</td>
+                    <% if @calenderHolidaySchedule[:monday] == 2 or @calenderHolidaySchedule[:monday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:tueday] == 2 or @calenderHolidaySchedule[:tueday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:wendnesday] == 2 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:thursday] == 2 or @calenderHolidaySchedule[:thursday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:friday] == 2 or @calenderHolidaySchedule[:friday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:saturday] == 2 or @calenderHolidaySchedule[:saturday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                    <% if @calenderHolidaySchedule[:sunday] == 2 or @calenderHolidaySchedule[:sunday] == 3 then %>
+                      <td>〇</td>
+                    <% else %>
+                      <td>ー</td>
+                    <% end %>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="mod-schedule-notes">
+                ※ ー は定休（祝日は不定休）
+              </p>
+            </div>
+          </div>
+          <div class="mod-footer-foot">
+            <p class="mod-footer-copyright">
+              Copyright © 2024 Mari Acupuncture. All rights reserverd
+            </p>
+            <a href="#wrapper" class="mod-footer-pagetop">
+              <%= image_tag 'footer/ico_arrow1_lbu.svg' %>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

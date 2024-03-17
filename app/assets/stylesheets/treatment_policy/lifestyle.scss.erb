@@ -1,0 +1,245 @@
+// Place all the styles related to the beginner controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*LIFESTYLEリスト***************/
+.treatment_policy-lifestyle-sec {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.treatment_policy-lifestyle-q {
+  position: relative;
+  background: #ecf7fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.treatment_policy-lifestyle-q-h {
+  font-weight: bold;
+}
+.treatment_policy-lifestyle-q-a {
+  display: none;
+  font-weight: 500;
+}
+.treatment_policy-lifestyle-q-a-claer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  margin-bottom: 1em;
+}
+.treatment_policy-lifestyle-q-a-cat {
+  font-weight: bold;
+}
+.treatment_policy-lifestyle-q-a-cat.u-bd-c1 {
+  border-radius: 100%;
+}
+.treatment_policy-lifestyle-q-a-txts {
+  margin-bottom: 1em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.treatment_policy-lifestyle-q-a-closeBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+.treatment_policy-lifestyle-q-a-closeBtn .mod-btn01 {
+  width: auto;
+  font-weight: 500;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*LIFESTYLEリスト***************/
+  .treatment_policy-lifestyle-sec {
+    margin-bottom: 3em;
+  }
+  .treatment_policy-lifestyle-q {
+    padding: 30px 40px;
+  }
+  .treatment_policy-lifestyle-q-a-cat {
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    margin-right: 30px;
+    font-size: 1.1em;
+  }
+  .treatment_policy-lifestyle-q-a {
+    padding: 40px 0 0 0;
+  }
+  .treatment_policy-lifestyle-q-h {
+    font-size: 1.6rem;
+  }
+    /*閉じるボタン***************/
+  .treatment_policy-lifestyle-q-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+  }
+  .treatment_policy-lifestyle-q-btn:before {
+    content: attr(data-name);
+    font-size: 3.0rem;
+    font-weight: bold;
+    display: block;
+    color: #1ba1e6;
+    position: absolute;
+    left: 20%;
+    top: 8%;
+  }
+
+
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*LIFESTYLEリスト***************/
+  .treatment_policy-lifestyle-sec {
+    margin-bottom: 3em;
+  }
+  .treatment_policy-lifestyle-q {
+    padding: 30px 40px;
+  }
+  .treatment_policy-lifestyle-q-a-cat {
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    margin-right: 30px;
+    font-size: 1.1em;
+  }
+  .treatment_policy-lifestyle-q-a {
+    padding: 40px 0 0 0;
+  }
+  .treatment_policy-lifestyle-q-h {
+    font-size: 1.6rem;
+  }
+  /*閉じるボタン***************/
+  .treatment_policy-lifestyle-q-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+  }
+  .treatment_policy-lifestyle-q-btn:before {
+    content: attr(data-name);
+    font-size: 3.0rem;
+    font-weight: bold;
+    display: block;
+    color: #1ba1e6;
+    position: absolute;
+    left: 20%;
+    top: 8%;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*LIFESTYLEリスト***************/
+  .treatment_policy-lifestyle-sec {
+    margin-bottom: 2em;
+  }
+  .treatment_policy-lifestyle-q {
+    padding: 30px 40px;
+  }
+  .treatment_policy-lifestyle-q-a-cat {
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    margin-right: 30px;
+    font-size: 1.1em;
+  }
+  .treatment_policy-lifestyle-q-a {
+    padding: 40px 0 0 0;
+  }
+  .treatment_policy-lifestyle-q-h {
+    font-size: 1.6rem;
+  }
+  /*閉じるボタン***************/
+  .treatment_policy-lifestyle-q-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+  }
+  .treatment_policy-lifestyle-q-btn:before {
+    content: attr(data-name);
+    font-size: 3.0rem;
+    font-weight: bold;
+    display: block;
+    color: #1ba1e6;
+    position: absolute;
+    left: 20%;
+    top: 8%;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*LIFESTYLEリスト***************/
+  .treatment_policy-lifestyle-sec {
+    margin-bottom: 1em;
+  }
+  .treatment_policy-lifestyle-q {
+    padding: 12px 20px;
+  }
+  .treatment_policy-lifestyle-q-a-cat {
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    margin-right: 20px;
+  }
+  .treatment_policy-lifestyle-q-a {
+    padding: 20px 0 0 0;
+  }
+  .treatment_policy-lifestyle-q-h {
+    font-size: 1.3rem;
+  }
+  .treatment_policy-lifestyle-q-a-closeBtn .mod-btn01 {
+    padding: 8px 8px;
+  }
+  /*閉じるボタン***************/
+  .treatment_policy-lifestyle-q-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+  }
+  .treatment_policy-lifestyle-q-btn:before {
+    content: attr(data-name);
+    font-size: 2.0rem;
+    font-weight: bold;
+    display: block;
+    color: #1ba1e6;
+    position: absolute;
+    top: 8%;
+  }
+}

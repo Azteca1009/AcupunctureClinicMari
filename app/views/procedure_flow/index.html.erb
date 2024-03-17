@@ -1,0 +1,174 @@
+<%= stylesheet_link_tag "procedure_flow/procedure-flow", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-keyvisualHead align-lb u-c-wh">
+  <h1 class="mod-keyvisualHead-txts">
+    子供のころ、<br>
+    お母さんがかけてくれた手の魔法。<br>
+    そんなやさしい魔法をかけられる場所でありたい。
+  </h1>
+</div>
+<%# パンくずリスト %>
+<nav class="mod-breadcrumb">
+  <ol class="mod-breadcrumb-links lapctbOnly">
+    <li><%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %></li>
+    <li>施術のながれ</li>
+  </ol>
+</nav>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <div class="procedure-flow-item wrapin wrapin-sp">
+    <div class="procedure-flow-item-info">
+      <h2 class="procedure-flow-item-info-h">
+        <span class="ja">
+          鍼灸に関するご相談
+        </span>
+      </h2>
+      <div class="procedure-flow-item-info-program">
+        身体の悩みや症状はひとぞれぞれ、<br>
+        ライフスタイルによっても治療方法は様々です。<br>
+        まずは一度、お気軽にご相談ください。<br>
+        メールでのご相談と、<br>
+        ご来院頂いてのカウンセリング<br>
+        どちらも費用はかかりません。
+      </div>
+    </div>
+    <figure class="procedure-flow-item-img">
+      <%= image_tag 'procedure-flow/procedure-flow-item-bg.jpg' %>
+    </figure>
+  </div>
+  <%# お問い合わせフォーム %>
+  <section class="u-mb-2e">
+    <div class="wrapin wrapin-sp">
+      <div class="mod-contactLinks">
+        <div class="mod-contactLinks-item is-tel">
+          <a href="tel:080-xxxx-xxxx">
+            <dl>
+              <dt>
+                <i><%= image_tag 'header/ico_tel_bu.svg' %></i>
+                080-xxxx-xxxx
+              </dt>
+              <dd>お急ぎの場合はお電話で</dd>
+            </dl>
+          </a>
+        </div>
+        <div class="mod-contactLinks-item is-mail">
+          <a href="/contact" data-turbolinks="false">
+            <dl>
+              <dt>メールによるご予約</dt>
+              <dd>まずはお気軽にご連絡ください</dd>
+            </dl>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%# 施術の流れ %>
+  <section class="mod-sec01 u-pb-0">
+    <div class="wrapin wrapin-sp">
+      <h2 class="mod-h02">施術のながれ</h2>
+    </div>
+  </section>
+  <div class="wrapin">
+    <%# ご予約・ご来店 %>
+    <section class="procedure-flow-counseling-sec item01">
+      <div class="procedure-flow-counseling-sec-txts">
+        <h3 class="procedure-flow-counseling-sec-h">
+          ➀ご予約・ご来店
+        </h3>
+        <p class="procedure-flow-counseling-sec-txt">
+          お電話、メール、ホームページ内のお問い合わせフォームよりご予約をお願いいしております。<br>
+          ご不明点等も、お気軽にご相談ください。<br>
+          <br>
+          当日は時間に余裕をもってお越しください。
+        </p>
+      </div>
+      <figure class="procedure-flow-counseling-sec-img"></figure>
+    </section>
+    <%# 受付・問診 %>
+    <section class="procedure-flow-counseling-sec item02">
+      <div class="procedure-flow-counseling-sec-txts">
+        <h3 class="procedure-flow-counseling-sec-h">
+          ➁受付・問診
+        </h3>
+        <p class="procedure-flow-counseling-sec-txt">
+          患者様それぞれの症状や体質に合わせて根本から治療していくために、時間をかけて丁寧な問診を行っております。<br>
+          <br>
+          まずは問診票にご記入いただきます。この際、症状とは関係がないと思われる内容についても伺うことがあります。その後、東洋医学の「四診合参」を用いて、患者様の状態を総合的に診立てます。<br>
+          ※四診合参とは<br>
+          <br>
+          四診合参とは、望診（ぼうしん）、聞診（ぶんしん）、問診（もんしん）、切診（せっしん）の4つの診察方法を総合して診立てをすることを意味します。
+        </p>
+      </div>
+      <figure class="procedure-flow-counseling-sec-img"></figure>
+    </section>
+    <%# 施術 %>
+    <section class="procedure-flow-counseling-sec item03">
+      <div class="procedure-flow-counseling-sec-txts">
+        <h3 class="procedure-flow-counseling-sec-h">
+          ➂施術
+        </h3>
+        <p class="procedure-flow-counseling-sec-txt">
+          問診により適切な判断をした上で、患者様に治療方法をご説明します。<br>
+          <br>
+          ご納得いただけた上で治療を開始いたします。治療は、経穴（ツボ）に鍼で刺激を加えて身体をよい状態に整えることが基本です。<br>
+          <br>
+          初診時は、問診や治療後の休憩時間を含め、1時間３０分ほどの治療時間を目安にしております。治療期間は患者様それぞれで異なりますが、しっかりご説明いたします。
+        </p>
+      </div>
+      <figure class="procedure-flow-counseling-sec-img"></figure>
+    </section>
+    <%# アドバイス・お会計 %>
+    <section class="procedure-flow-counseling-sec item04">
+      <div class="procedure-flow-counseling-sec-txts">
+        <h3 class="procedure-flow-counseling-sec-h">
+          ➃アドバイス・お会計
+        </h3>
+        <p class="procedure-flow-counseling-sec-txt">
+          習慣や食事、姿勢など、日常生活での注意事項についてアドバイスいたします。<br>
+          <br>
+          鍼灸治療は症状によっては即効性が高いものの、体質改善や不妊・妊活鍼灸のように体を根本から変えていく場合は相応の時間がかかるため、患者さまごとの今後の施術計画や通院目安などについてもお伝えいたします。<br>
+          <br>
+          お会計にはお得なプリペイドカードや便利なクレジットカードもご利用いただけます。
+        </p>
+      </div>
+      <figure class="procedure-flow-counseling-sec-img"></figure>
+    </section>
+  </div>
+  <%# 施術後の注意 %>
+  <section class="procedure-flow-caution">
+    <div class="wrapin wrapin-sp">
+      <div class="procedure-flow-caution-head">
+        <h2 class="procedure-flow-caution-h">
+          <span class="en">CAUTION</span>
+          <span class="ja">施術後の注意</span>
+        </h2>
+      </div>
+      <ul class="procedure-flow-caution-ul">
+        <li class="procedure-flow-caution-list">
+          施術後は、できるだけ身体を休めるようにしてください。治療効果が高まります。
+        </li>
+        <li class="procedure-flow-caution-list">
+          治療を受けた日の飲酒、運動はお控えください。
+        </li>
+        <li class="procedure-flow-caution-list">
+          お風呂は入っても構いません。
+        </li>
+        <li class="procedure-flow-caution-list">
+          施術後、３日間ほど、鍼をした部位に重だるさや筋肉痛が残ります。この重だるさは治療の効果が続いているものです。次の治療は３日後～１週間以内に受けてください。
+        </li>
+        <li class="procedure-flow-caution-list">
+          内出血が起こり、一時的に腫れたり、青あざができることがございます。腫れは１日で、青あざも１～２週間ほどで消えます。
+        </li>
+        <li class="procedure-flow-caution-list">
+          治療部位によってはまれに治療後しびれが出ることがございます。１～２か月ほどで、もしくは治療を重ねることで消失します。
+        </li>
+        <li class="procedure-flow-caution-list">
+          治療している最中、まれにですが気分が悪くなることがございます。これは筋緊張がかなり強い方、血圧が高めの方、体調が悪い方などに起こりやすいです。鍼をとった後に少し休むとおさまります。
+        </li>
+        <li class="procedure-flow-caution-list">
+          治療後、一時的に症状が悪化したように感じることがあります。これは鍼治療で筋肉の神経の圧迫が取れ、今まで感じることのできなかった痛みが、正常に感じることができるようになるからです。治療を重ねることでよくなっていきます。
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

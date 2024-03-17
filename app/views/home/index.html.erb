@@ -1,0 +1,569 @@
+<%= stylesheet_link_tag "home/home", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-keyvisualHead align-lb u-c-wh">
+  <h1 class="mod-keyvisualHead-txts">
+    明日の笑顔を、この手から。
+  </h1>
+</div>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <%# インフォメーションとスケジュール %>
+  <div class="home-infoClear">
+    <div class="wrapin home-infoClear-in">
+      <%# INFOMATION %>
+      <section class="home-info">
+        <h2 class="home-info-h">INFORMATION</h2>
+        <ul class="home-info-posts">
+          <% @information_setting.each do |param| %>
+          <li class="home-info-posts-item">
+            <span><%= param[:date_information] %> </span><%# 日付 %>
+            <span><%= param[:date_information].strftime("%a") %> </span><%# 曜日 %>
+            <span><%= param[:title] %> </span><%# タイトル %>
+            <div class="home-info-posts-item-comment"><%# 本文 %>
+              <%= param[:comment] %>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </section>
+      <%# SCHEDULE %>
+      <section class="home-schedule">
+        <div class="home-schedule-head">
+          <h2 class="home-info-h">SCHEDULE</h2>
+        </div>
+        <table class="mod-schedule-table">
+          <tbody>
+            <tr>
+              <th></th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th>土</th>
+              <th>日</th>
+            </tr>
+            <tr>
+              <td class="tal">9:30 - 13:00</td>
+              <% if @calenderHolidaySchedule[:monday] == 1 or @calenderHolidaySchedule[:monday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:tueday] == 1 or @calenderHolidaySchedule[:tueday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:wendnesday] == 1 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:thursday] == 1 or @calenderHolidaySchedule[:thursday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:friday] == 1 or @calenderHolidaySchedule[:friday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:saturday] == 1 or @calenderHolidaySchedule[:saturday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:sunday] == 1 or @calenderHolidaySchedule[:sunday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+            </tr>
+            <tr>
+              <td class="tal">14:30 - 19:00</td>
+              <% if @calenderHolidaySchedule[:monday] == 2 or @calenderHolidaySchedule[:monday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:tueday] == 2 or @calenderHolidaySchedule[:tueday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:wendnesday] == 2 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:thursday] == 2 or @calenderHolidaySchedule[:thursday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:friday] == 2 or @calenderHolidaySchedule[:friday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:saturday] == 2 or @calenderHolidaySchedule[:saturday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+              <% if @calenderHolidaySchedule[:sunday] == 2 or @calenderHolidaySchedule[:sunday] == 3 then %>
+                <td>〇</td>
+              <% else %>
+                <td>ー</td>
+              <% end %>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mod-schedule-notes">
+          ※ ー は定休（祝日は不定休）
+        </p>
+      </section>
+    </div>
+  </div>
+  <%# ホームフィールド %>
+  <div class="home-field">
+    <div class="home-field-bg01"></div>
+    <div class="wrapin home-field-in">
+      <section class="home-field-sec is-orthodontics">
+        <h2 class="home-field-sec-h">
+          <small>SYMPTOMS</small>
+          こんな症状にお悩みなら
+        </h2>
+        <ul class="home-field-sec-links">
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=01" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_01.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">腰痛</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=03#faq02" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_02.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">坐骨神経痛</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=04#faq03" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_04.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">頭痛</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=06#faq05" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_03.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">首や肩のコリ</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=07#faq06" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_01.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">四十肩五十肩</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_02.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">顎関節症</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=08#faq07" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_04.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">股関節お尻の痛み</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=09#faq08" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_03.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">大腿神経痛</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=10#faq09" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_01.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">膝の痛み</p>
+            </a>
+          </li>
+          <li class="home-field-sec-links-item">
+            <a href="/treatment_policy/faq?faq_id=11#faq10" data-turbolinks="false">
+              <i>
+                <%= image_tag 'home/symptom_02.jpg' %>
+              </i>
+              <p class="home-field-sec-links-txt">テニス肘ゴルフ肘</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <%# DIFFERENCE %>
+  <section class="home-difference">
+    <div class="wrapin wrapin-sp">
+      <h2 class="home-difference-h">DIFFERENCE</h2>
+      <%# 鍼灸と他の選択肢の違い %>
+      <section class="home-difference-other-selection">
+        <p class="home-difference-lead">鍼灸と他の選択肢の違い</p>
+        <p class="home-difference-sec-lead">
+          多くの治療法は一時的な効果だけです。<br>
+          一方、鍼灸は続けることで体質改善まで行えるため、健康体を取り戻し、それを維持することが可能です。
+        </p>
+        <table class="home-difference-other-table">
+          <tbody>
+            <tr>
+              <th></th>
+              <th>未病の改善<br>
+                <div class="lapctbOnly">（原因不明のカラダの不調）</div>
+              </th>
+              <th class="lapctbOnly">国家資格</th>
+              <th>即効性</th>
+              <th>体質改善<br>
+                <div class="lapctbOnly">（血行・免疫・内分泌・自立神経など）</div>
+              </th>
+              <th>副作用</th>
+            </tr>
+            <tr>
+              <td>一般的な<br>
+                <h2>処方薬</h2>
+              </td>
+              <td>
+                <div class="circle_cross">×</div>
+                <div class="home-difference-complement">病名ありきの治療</div>
+              </td>
+              <td class="lapctbOnly">
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">医師・薬剤師</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">高い</div>
+              </td>
+              <td>
+                <div class="circle_cross">×</div>
+              </td>
+              <td>
+                <div class="circle_cross">×</div>
+                <div class="home-difference-complement">副作用がある</div>
+              </td>
+            </tr>
+            <tr>
+              <td>一般的な<br>
+                <h2>漢方薬</h2>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+              </td>
+              <td class="lapctbOnly">
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">医師・薬剤師</div>
+              </td>
+              <td>
+                <div class="circle_cross">△～〇</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+              </td>
+              <td>
+                <div class="circle_cross">×～△</div>
+              </td>
+            </tr>
+            <tr>
+              <td>一般的な<br>
+                <h2>整体</h2>
+              </td>
+              <td>
+                <div class="circle_cross">△</div>
+              </td>
+              <td class="lapctbOnly">
+                <div class="circle_cross">×</div>
+              </td>
+              <td>
+                <div class="circle_cross">△</div>
+              </td>
+              <td>
+                <div class="circle_cross">△</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+              </td>
+            </tr>
+            <tr>
+              <td>一般的な<br>
+                <h2>サプリメント</h2>
+              </td>
+              <td>
+                <div class="circle_cross">×～△</div>
+              </td>
+              <td class="lapctbOnly">
+                <div class="circle_cross">×</div>
+              </td>
+              <td>
+                <div class="circle_cross">×</div>
+              </td>
+              <td>
+                <div class="circle_cross">×</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+              </td>
+            </tr>
+            <tr class="my-clinic">
+              <td>まり鍼灸院の<br>
+                <h2>鍼灸</h2>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">自然治癒力を高めて症状を改善</div>
+              </td>
+              <td class="lapctbOnly">
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">鍼灸師</div>
+              </td>
+              <td>
+                <div class="circle_cross">△～〇</div>
+                <div class="home-difference-complement">鎮痛などは即効性が高い</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">血行、免疫力、自律神経の調整</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">副作用はない</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <%# 他院との違い %>
+      <section class="home-difference-other-selection">
+        <p class="home-difference-lead">他院との違い</p>
+        <p class="home-difference-sec-lead">
+          得意としているのは痛みに対しての治療です。<br>
+          筋肉に針を打つことで、筋肉が硬くなることで起こる血行不良・神経の圧迫による痛みに対して効果があります。
+        </p>
+        <table class="home-difference-other-table">
+          <tbody>
+            <tr>
+              <th></th>
+              <th class="my-clinic">北京堂淺野式<br>
+                <div>（当院）</div>
+              </th>
+              <th>北京堂</th>
+              <th>その他の治療院</th>
+            </tr>
+            <tr>
+              <td class="home-difference-item">鍼の本数</td>
+              <td class="my-clinic">
+                <div class="circle_cross">◎</div>
+                <div class="home-difference-complement">４０～８０本</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+                <div class="home-difference-complement">４０～６０本</div>
+              </td>
+              <td>
+                <div class="circle_cross">×～△</div>
+                <div class="home-difference-complement">２０～４０本</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="home-difference-item">鍼の響き</td>
+              <td class="my-clinic">
+                <div class="circle_cross">◎</div>
+              </td>
+              <td>
+                <div class="circle_cross">〇</div>
+              </td>
+              <td>
+                <div class="circle_cross">×～〇</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="home-difference-item">鍼を刺す長さ</td>
+              <td class="my-clinic">
+                <div class="circle_cross">◎</div>
+                <div class="home-difference-complement">１０～１５ｃｍ</div>
+              </td>
+              <td>
+                <div class="circle_cross">◎</div>
+                <div class="home-difference-complement">５～１５ｃｍ</div>
+              </td>
+              <td>
+                <div class="circle_cross">×～〇</div>
+                <div class="home-difference-complement">２～１０ｃｍ</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="home-difference-item">置鍼時間</td>
+              <td class="my-clinic">
+                <div class="circle_cross">◎</div>
+                <div class="home-difference-complement">４０分</div>
+              </td>
+              <td>
+                <div class="circle_cross">△～〇</div>
+                <div class="home-difference-complement">２０～３０分</div>
+              </td>
+              <td>
+                <div class="circle_cross">×～△</div>
+                <div class="home-difference-complement">１０～２０分</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="home-difference-item">鍼後の不快感</td>
+              <td class="my-clinic">
+                <div class="circle_cross">×</div>
+              </td>
+              <td>
+                <div class="circle_cross">△</div>
+              </td>
+              <td>
+                <div class="circle_cross">△～〇</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="home-difference-item">鍼を打つ場所</td>
+              <td class="my-clinic">
+                <div class="circle_cross">筋肉</div>
+              </td>
+              <td>
+                <div class="circle_cross">筋肉</div>
+              </td>
+              <td>
+                <div class="circle_cross">皮膚・経穴（ツボ）筋肉など</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </section>
+  <section class="home-other">
+    <h2 class="home-other-h">OTHER</h2>
+    <div class="wrapin home-other-in">
+      <section class="home-other-sec" id="calender-wrapper">
+        <a href="/other/calender" data-turbolinks="false">
+          <table class="calender">
+            <!-- 休館日の年月 -->
+            <caption><%= @nowMonth %></caption>
+            <!-- 休館日の曜日 -->
+            <thead>
+              <tr>
+                <% @week.each do |day| %>
+                <th><%= day %></th>
+                <% end %>
+              </tr>
+            </thead>
+            <!-- 休館日の曜日 -->
+            <tbody>
+              <% num = 1 %>
+              <% firstWeekDayFlg = true %>
+              <% hoidayDayFlg = false %>
+              <%# その月の週分回す %>
+              <% @weekNum.times do %>
+              <tr>
+                <%# 1週間分ループ %>
+                <% for week_Day in 0..6 do %>
+                  <%# 最初の週 %>
+                  <% if firstWeekDayFlg == true then %>
+                    <%# 今月の始まりの曜日なら %>
+                    <% if @firstWeekDay == week_Day then %>
+                      <%# 今月の休みだけループ %>
+                      <% for hoidayDay in @holiday do %>
+                        <%# もし、休みの日が指定されていたのなら %>
+                        <% if hoidayDay[:date_holiday].day == num then %>
+                          <%# 休日です %>
+                          <td class="holiday"><%= num %></td>
+                          <% hoidayDayFlg = true %>
+                        <% end %>
+                      <% end %>
+                      <%# もし、休みの日が指定されていなければ %>
+                      <% if hoidayDayFlg == false then %>
+                        <%# 休館日かどうかで表示させるtdを変更 %>
+                        <% if @holidayWeek[week_Day] == 0 then %>
+                          <td class="holiday"><%= num %></td>
+                        <% else %>
+                          <td><%= num %></td>
+                        <% end %>
+                      <% end %>
+                      <% hoidayDayFlg = false %>
+                      <% num += 1 %>
+                      <% firstWeekDayFlg = false %>
+                    <% else %>
+                      <td></td>
+                    <% end %>
+                  <%# それ以降の週 %>
+                  <% else %>
+                    <%# 今月の最後の日を超えていなければ %>
+                    <% if @lastDay + 1 > num then %>
+                      <%# 今月の休み分だけループ %>
+                      <% for hoidayDay in @holiday do %>
+                        <%# もし、休みの日が指定されていたのなら %>
+                        <% if hoidayDay[:date_holiday].day == num then %>
+                          <%# 休日です %>
+                          <td class="holiday"><%= num %></td>
+                          <% hoidayDayFlg = true %>
+                        <% end %>
+                      <% end %>
+                      <%# もし、休みの日が指定されていなければ %>
+                      <% if hoidayDayFlg == false then %>
+                        <%# 休館日かどうかで表示させるtdを変更 %>
+                        <% if @holidayWeek[week_Day] == 1 then %>
+                          <td class="half_holiday"><%= num %><br><div>午後休</div></td>
+                        <% elsif @holidayWeek[week_Day] == 2 then %>
+                          <td class="half_holiday"><%= num %><br><div>午前休</div></td>
+                        <% elsif @holidayWeek[week_Day] == 0 then %>
+                          <td class="holiday"><%= num %></td>
+                        <% else %>
+                          <td><%= num %></td>
+                        <% end %>
+                      <% end %>
+                      <% hoidayDayFlg = false %>
+                      <% num += 1 %>
+                    <% else %>
+                      <td></td>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </a>
+      </section>
+      <section class="home-other-sec">
+        <a href="/treatment_policy/reverberation" data-turbolinks="false">
+          <figure class="home-other-itaihari">
+            <p class="mod-noteArchive-posts-cat">
+              痛い鍼はヘタなのか
+            </p>
+          </figure>
+        </a>
+      </section>
+    </div>
+  </section>
+</div>

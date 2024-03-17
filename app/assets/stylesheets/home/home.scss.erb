@@ -1,0 +1,659 @@
+.mod-keyvisualHead {
+  background-image: url("<%= asset_path('home/home_image_01.jpg') %>");
+}
+.none {
+  background: #d9eef7;
+}
+/*INFOMATIONとSCHEDULE***************/
+.home-infoClear-in {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.home-info-h {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
+  color: #1ba1e6;
+  font-weight: bold;
+}
+.home-info-posts-item {
+  border-bottom: 1px solid #E1E5E7;
+  font-weight: bold;
+}
+/*SYMPTOMS***************/
+.home-field-sec-h {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  text-align: center;
+}
+.home-field-sec-h small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #1ba1e6;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.home-field-sec-links {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
+}
+.home-field-sec-links-item {
+  width: 21%;
+  margin-bottom: 3%;
+}
+.home-field-sec-links-item a {
+  display: block;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+}
+.home-field-sec-links-item i {
+  width: 40%;
+  display: inline-block;
+}
+/*DIFFERENCE***************/
+.home-difference {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.home-difference-h {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
+  color: #1ba1e6;
+  text-align: center;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+}
+.home-difference-lead {
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+.home-difference-sec-lead {
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+.my-clinic{
+  background: #d9eef7;
+}
+/*OTHER***************/
+.home-other-h {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
+  color: #1ba1e6;
+  text-align: center;
+  padding: 40px 0 50px;
+  font-weight: bold;
+}
+.home-other {
+  background: #d9eef7;
+}
+// .home-other-sec iframe {
+//   width: 100%;
+//   height: 100%;
+//   max-width: 800px;
+//   max-height: 800px
+// }
+// .google-calendar {
+//     width: 47%;
+//     position: relative;
+// }
+// .google-calendar:before {
+//     content: "";
+//     display: block;
+//     padding-top: 65%;
+// }
+// .google-calendar iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     max-width: 800px;
+//     max-height: 800px
+// }
+/**カレンダー**/
+#calender-wrapper {
+  background-color: #fff;
+}
+.calender {
+  table-layout: fixed;
+  width:100%;
+  border-collapse: separate;
+  border: 1px solid #dedede;
+}
+.calender th,
+.calender td {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border: 1px solid #dedede;
+  text-align: center;
+  vertical-align: middle;
+}
+.calender th {
+  background-color: #E1E5E7;
+}
+.calender th:first-child {
+  background-color: #e05557;
+  color: #fff;
+}
+.calender td:first-child {
+  color: #e05557;
+}
+.calender th:last-child {
+  background-color: #207bcf;
+  color: #fff;
+}
+.calender td:last-child {
+  color: #207bcf;
+}
+.holiday {
+  color: #e05557;
+  background-color: #FFCCCC;
+}
+td.half_holiday {
+  background-color: #d9eef7;
+  padding:0;
+}
+td.half_holiday div {
+  font-size: 0.8rem;
+}
+.calender caption {
+  margin:10px;
+  padding: 10px;
+  border: 5px solid #dedede;
+  border-radius: 30px;
+  font-weight: bold;
+}
+.home-difference-other-selection {
+  margin-bottom: 3em;
+}
+.home-other-itaihari {
+  background: url("<%= asset_path('home/home_other_01.jpg') %>") center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  letter-spacing: 0.2em;
+  height: 100%
+}
+.mod-noteArchive-posts-cat {
+  position: absolute;
+  background: #fff;
+  font-weight: bold;
+}
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*INFOMATIONとSCHEDULE***************/
+  .home-infoClear {
+    padding: 50px 0;
+  }
+  .home-infoClear-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .home-info {
+    width: 48%;
+  }
+  .home-info-h {
+    margin-bottom: 1.4em;
+  }
+  .home-info-posts-item {
+    padding: 19px 0;
+  }
+  .home-schedule {
+    width: 48%;
+  }
+  /*SYMPTOMS***************/
+  .home-field {
+    position: relative;
+  }
+  .home-field-bg01 {
+    background: #d9eef7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-field-sec {
+    position: relative;
+    width: 100%;
+    padding: 60px 0 50px;
+  }
+  .home-field-sec-h {
+    font-size: 1.8rem;
+  }
+  .home-field-sec-links-item i {
+    width: 116px;
+  }
+  .home-field-sec-links-txt {
+    font-weight: 500;
+  }
+  /*DIFFERENCE***************/
+  .home-difference {
+    padding: 40px 0;
+  }
+  .home-difference-lead {
+    font-size: 1.8rem;
+  }
+  .home-difference-sec-lead {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  table.home-difference-other-table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+  .home-difference-other-table th, .home-difference-other-table td {
+    border-right: 1px solid #E1E5E7;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .home-difference-other-table h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .circle_cross {
+    font-size: 1.5rem;
+  }
+  /*OTHER***************/
+  .home-other {
+    position: relative;
+  }
+  .home-other-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .home-other-sec {
+    position: relative;
+    width: 525px;
+    height: 525px;
+    margin-bottom: 50px;
+  }
+  .calender {
+    height: 84%;
+  }
+  .mod-noteArchive-posts-cat {
+    font-size: 1.5rem;
+    top: 24px;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*INFOMATIONとSCHEDULE***************/
+  .home-infoClear {
+    padding: 50px 0;
+  }
+  .home-infoClear-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .home-info {
+    width: 48%;
+  }
+  .home-info-h {
+    margin-bottom: 1.4em;
+  }
+  .home-info-posts-item {
+    padding: 19px 0;
+  }
+  .home-schedule {
+    width: 48%;
+  }
+  /*SYMPTOMS***************/
+  .home-field {
+    position: relative;
+  }
+  .home-field-bg01 {
+    background: #d9eef7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-field-sec {
+    position: relative;
+    width: 100%;
+    padding: 60px 0 50px;
+  }
+  .home-field-sec-h {
+    font-size: 1.8rem;
+  }
+  .home-field-sec-links-item i {
+    width: 116px;
+  }
+  .home-field-sec-links-txt {
+    font-weight: 500;
+  }
+  /*DIFFERENCE***************/
+  .home-difference {
+    padding: 40px 0;
+  }
+  .home-difference-lead {
+    font-size: 1.8rem;
+  }
+  .home-difference-sec-lead {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  table.home-difference-other-table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+  }
+  .home-difference-other-table th, .home-difference-other-table td {
+    border-right: 1px solid #E1E5E7;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .home-difference-other-table h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .circle_cross {
+    font-size: 1.5rem;
+  }
+  /*OTHER***************/
+  .home-other {
+    position: relative;
+  }
+  .home-other-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .home-other-sec {
+    position: relative;
+    max-width: 450px;
+    width: 47%;
+    margin-bottom: 50px;
+  }
+  .calender {
+    height: 81%;
+  }
+  .mod-noteArchive-posts-cat {
+    font-size: 1.5rem;
+    top: 24px;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*INFOMATIONとSCHEDULE***************/
+  .home-infoClear {
+    padding: 50px 0;
+  }
+  .home-infoClear-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .home-info {
+    width: 48%;
+  }
+  .home-info-h {
+    margin-bottom: 1.4em;
+  }
+  .home-info-posts-item {
+    padding: 19px 0;
+  }
+  .home-schedule {
+    width: 48%;
+  }
+  /*SYMPTOMS***************/
+  .home-field {
+    position: relative;
+  }
+  .home-field-bg01 {
+    background: #d9eef7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-field-sec {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 50px;
+  }
+  .home-field-sec-h {
+    font-size: 1.8rem;
+  }
+  .home-field-sec-links-item i {
+    width: 116px;
+  }
+  .home-field-sec-links-txt {
+    font-weight: 500;
+  }
+  /*DIFFERENCE***************/
+  .home-difference {
+    padding: 50px 0;
+  }
+  .home-difference-lead {
+    font-size: 1.8rem;
+  }
+  .home-difference-sec-lead {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  table.home-difference-other-table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+  }
+  .home-difference-other-table th, .home-difference-other-table td {
+    border-right: 1px solid #E1E5E7;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .home-difference-other-table h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .circle_cross {
+    font-size: 1.5rem;
+  }
+  /*OTHER***************/
+  .home-other {
+    position: relative;
+  }
+  .home-other-h {
+    padding: 30px 0;
+  }
+  .home-other-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .home-other-sec {
+    position: relative;
+    width: 47%;
+    margin-bottom: 50px;
+  }
+  .calender {
+    height: 80%;
+  }
+  .mod-noteArchive-posts-cat {
+    font-size: 1.5rem;
+    top: 24px;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  .lapctbOnly {
+    display: none;
+  }
+  /*INFOMATIONとSCHEDULE***************/
+  .home-infoClear {
+    padding: 20px;
+  }
+  .home-info {
+    margin-bottom: 40px;
+  }
+  .home-info-h {
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+  }
+  .home-info-posts-item {
+    padding: 10px 0;
+  }
+  /*SYMPTOMS***************/
+  .home-field-sec:nth-child(1) {
+    background: #DBEBEF;
+  }
+  .home-field-sec {
+    padding: 20px;
+  }
+  .home-field-sec-h {
+    font-size: 1.4rem;
+  }
+  .home-field-sec-h small {
+    font-size: 1.2rem;
+  }
+  .home-field-sec-links {
+    padding-top: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .home-field-sec-links-item {
+    width: 49%;
+    margin-bottom: 2%;
+  }
+  .home-field-sec-links-item i {
+    width: 116px;
+  }
+  .home-field-sec-links-txt {
+    font-weight: 500;
+  }
+  /*DIFFERENCE***************/
+  .home-difference {
+    padding: 40px 0;
+  }
+  .home-difference-h {
+    font-size: 1.3rem;
+  }
+  .home-difference-lead {
+    font-size: 1.8rem;
+    margin: 1em 0 0.5em;
+  }
+  .home-difference-sec-lead {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  table.home-difference-other-table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.5rem;
+  }
+  .home-difference-other-table th, .home-difference-other-table td {
+    border-right: 1px solid #E1E5E7;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .home-difference-other-table h2 {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .circle_cross {
+    font-size: 1rem;
+  }
+  .home-difference-item {
+    font-size: 1rem;
+  }
+  /*OTHER***************/
+  .home-other {
+    position: relative;
+  }
+  .home-other-h {
+    font-size: 1.3rem;
+    padding: 20px 0;
+  }
+  .home-other-in {
+    padding-bottom: 30px;
+  }
+  .home-other-sec {
+    width: 95vw;
+    min-height: 300px;
+    max-height: 800px;
+    margin: auto;
+  }
+  .calender {
+    width: 95vw;
+    height: 95vw;
+    margin-bottom: 30px;
+  }
+  .home-other-itaihari {
+    width: 95vw;
+    height: 95vw;
+  }
+  .calender caption {
+    margin:5px;
+    padding: 5px;
+    border: 2px solid #dedede;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  .calender th,
+  .calender td {
+    padding: 5px 0;
+  }
+  .mod-noteArchive-posts-cat {
+    font-size: 1.5rem;
+    top: 24px;
+  }
+}

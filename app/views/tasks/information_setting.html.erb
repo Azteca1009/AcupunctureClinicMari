@@ -1,0 +1,92 @@
+<%= stylesheet_link_tag "tasks/information_setting", :media => "all" %>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <%# 特別休日タイトル %>
+    <h2 class="information_setting-h">
+      <span class="ja">
+        INFORMATION SETTING
+      </span>
+    </h2>
+    <%# INFORMATION設定フォーム %>
+    <div class="information_setting_input">
+      <%= form_for(:session, url: tasks_information_setting_path) do |f| %>
+        <div class="mod-form">
+          <table class="mod-form-table">
+            <tbody>
+              <tr>
+                <th>表示させる日付<span class="must">※必須</span></th>
+                <td>
+                  <%= f.text_field :date_information , :class => 'u-input size-100p', :size => '60', :id => 'date_information', :placeholder => "例：2020/11/07", :required => true, autocomplete: 'off' %>
+                </td>
+              </tr>
+              <tr>
+                <th>タイトル<span class="must">※必須</span></th>
+                <td>
+                  <%= f.text_field :title, :class => 'u-input size-100p', :size => '60', :placeholder => "例：ホームページ開設しました", :required => true, autocomplete: 'off' %>
+                </td>
+              </tr>
+              <tr>
+                <th>内容<span class="must">※必須</span></th>
+                <td>
+                  <%= f.text_area :comment, :class => 'u-input size-100p', :cols => '50', :rows => '10', :required => true %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mod-form-btns">
+            <div class="mod-btns1col u-mb-1e">
+              <div class="mod-btns1col-item"></div>
+            </div>
+            <div class="mod-btns1col">
+              <div class="mod-btns1col-item">
+                <%= f.submit '登録', class: 'btn btn-primary mod-btn01 u-bg-c1 u-c-wh', data: { confirm: "登録してもいいですか？"} %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%# INFORMATION SETTING一覧表示タイトル %>
+    <h2 class="information_setting-h">
+      <span class="ja">
+        INFORMATION SETTING一覧
+      </span>
+    </h2>
+    <%# 特別休日一覧表示 %>
+    <div class="specific_holiday_setting_input">
+      <table class="specifics_table">
+        <tbody>
+            <tr class="specifics_title">
+                <th>date_information</th>
+                <th>title</th>
+                <th>comment</th>
+                <th></th>
+            </tr>
+            <% @informationSetting.each do |information| %>
+            <tr class="specifics_content">
+              <td><%= information.date_information %></td>
+              <td><%= information.title %></td>
+              <td><%= information.comment %></td>
+              <td class="information_setting_delete">
+                <%= link_to('削除',tasks_information_setting_path(:id => information.id),
+                                method: :delete,data: {confirm:'削除してもいいですか？'}, class: "delete_btn mod-btn02 u-c-wh")%>
+              </td>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+<script>
+	$(function() {
+		$.datepicker.setDefaults($.datepicker.regional["ja"]);
+		$("#date_information").datepicker();
+	});
+</script>

@@ -1,0 +1,202 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.none {
+  background: #d9eef7;
+}
+/*CALENDER***************/
+.other-calender {
+  background: #d9eef7;
+}
+.other-calender-h {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
+  color: #1ba1e6;
+  text-align: center;
+  padding: 40px 0 50px;
+  font-weight: bold;
+}
+/**カレンダー**/
+.other-calender-sec {
+  background-color: #fff;
+}
+.calender {
+  table-layout: fixed;
+  width:100%;
+  border-collapse: separate;
+  border: 1px solid #dedede;
+}
+.calender th,
+.calender td {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border: 1px solid #dedede;
+  text-align: center;
+  vertical-align: middle;
+}
+.calender th {
+  background-color: #E1E5E7;
+}
+.calender th:first-child {
+  background-color: #e05557;
+  color: #fff;
+}
+.calender td:first-child {
+  color: #e05557;
+}
+.calender th:last-child {
+  background-color: #207bcf;
+  color: #fff;
+}
+.calender td:last-child {
+  color: #207bcf;
+}
+.holiday {
+  color: #e05557;
+  background-color: #FFCCCC;
+}
+td.half_holiday {
+  background-color: #d9eef7;
+  padding:0;
+}
+td.half_holiday div {
+  font-size: 0.8rem;
+}
+.calender caption {
+  margin:10px;
+  padding: 10px;
+  border: 5px solid #dedede;
+  border-radius: 30px;
+  font-weight: bold;
+}
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*CALENDER***************/
+  .other-calender {
+    position: relative;
+  }
+  .other-calender-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .other-calender-sec {
+    position: relative;
+    width: 525px;
+    height: 525px;
+    margin-bottom: 50px;
+  }
+  .calender {
+    height: 84%;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*CALENDER***************/
+  .other-calender {
+    position: relative;
+  }
+  .other-calender-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .other-calender-sec {
+    position: relative;
+    max-width: 450px;
+    width: 47%;
+    margin-bottom: 50px;
+  }
+  .calender {
+    height: 81%;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*CALENDER***************/
+  .other-calender {
+    position: relative;
+  }
+  .other-calender-h {
+    padding: 30px 0;
+  }
+  .other-calender-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .other-calender-sec {
+    position: relative;
+    width: 47%;
+    margin-bottom: 50px;
+  }
+  .calender {
+    height: 80%;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  .lapctbOnly {
+    display: none;
+  }
+  .mod-mainContent {
+    margin-top: 75px;
+  }
+  /*CALENDER***************/
+  .other-calender {
+    position: relative;
+  }
+  .other-calender-h {
+    font-size: 1.3rem;
+    padding: 20px 0;
+  }
+  .other-calender-sec {
+    width: 95vw;
+    min-height: 300px;
+    max-height: 800px;
+    margin: auto;
+  }
+  .calender {
+    width: 95vw;
+    height: 95vw;
+    margin-bottom: 30px;
+  }
+  .calender caption {
+    margin:5px;
+    padding: 5px;
+    border: 2px solid #dedede;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  .calender th,
+  .calender td {
+    padding: 5px 0;
+  }
+  .mod-noteArchive-posts-cat {
+    font-size: 1.5rem;
+    top: 24px;
+  }
+}

@@ -1,0 +1,76 @@
+<%= stylesheet_link_tag "tasks/specific_holiday_setting", :media => "all" %>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <%# 特別休日タイトル %>
+    <h2 class="specific_holiday_setting-h">
+      <span class="ja">
+        特別休日
+      </span>
+    </h2>
+    <%# 特別休日指定フォーム %>
+    <div class="specific_holiday_setting_input">
+      <%= form_for(:session, url: tasks_specific_holiday_setting_path) do |f| %>
+        <div class="mod-form">
+          <table class="mod-form-table">
+            <tbody>
+              <tr>
+                <th>特別休日指定</th>
+                <td>
+                  <%= f.text_field :date_holiday , :class => 'u-input size-100p', :size => '60', :id => 'specific_holiday', :placeholder => "例：2020/11/07", :required => true, autocomplete: 'off' %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mod-form-btns">
+            <div class="mod-btns1col u-mb-1e">
+              <div class="mod-btns1col-item"></div>
+            </div>
+            <div class="mod-btns1col">
+              <div class="mod-btns1col-item">
+                <%= f.submit '登録', class: 'btn btn-primary mod-btn01 u-bg-c1 u-c-wh' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%# 特別休日一覧表示タイトル %>
+    <h2 class="specific_holiday_setting-h">
+      <span class="ja">
+        特別休日一覧
+      </span>
+    </h2>
+    <%# 特別休日一覧表示 %>
+    <div class="specific_holiday_setting_input">
+      <table class="specifics_table">
+        <tbody>
+            <tr class="specifics_title">
+                <th>特別休日</th>
+                <th></th>
+            </tr>
+            <% @calenderHolidays.each do |calenderHoliday| %>
+            <tr class="specifics_content">
+              <td><%= calenderHoliday.date_holiday %></td>
+              <td>
+                <%= link_to('削除',tasks_specific_holiday_setting_path(:id => calenderHoliday.id),
+                                method: :delete,data: {confirm:'削除してもいいですか？'}, class: "delete_btn mod-btn02 u-c-wh")%>
+              </td>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+<script>
+	$(function() {
+		$.datepicker.setDefaults($.datepicker.regional["ja"]);
+		$("#specific_holiday").datepicker();
+	});
+</script>

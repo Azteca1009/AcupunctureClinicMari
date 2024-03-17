@@ -1,0 +1,113 @@
+<%= stylesheet_link_tag "beginner/beginner", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-keyvisualHead align-lb u-c-wh">
+  <h1 class="mod-keyvisualHead-txts">
+    思いには力を込めて、<br>
+    この指先には愛を込めて。
+  </h1>
+</div>
+<%# パンくずリスト %>
+<nav class="mod-breadcrumb">
+  <ol class="mod-breadcrumb-links lapctbOnly">
+    <li><%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %></li>
+    <li>はじめての方へ</li>
+  </ol>
+</nav>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <div class="beginner-what-is wrapin">
+    <h2 class="beginner-what-is-h">
+      <span class="ja">
+        鍼灸治療とは
+      </span>
+    </h2>
+    <div class="beginner-what-is-content">
+      問題がある患部や経穴（ツボ）に鍼や灸を用いて、<br>
+      刺激を与え、病気の治癒や予防をめざす治療方法のことを一般的に鍼灸治療といいます。<br>
+      <br>
+      私たちの身体には361箇所のツボが存在すると言われています。<br>
+      東洋医学の専門用語では「経穴」と呼ばれており、刺激すると症状を緩和し、弱った機能を回復させます。<br>
+      <br>
+      人によって差はありますがツボの大きさはだいたい500円玉ほど。<br>
+      その範囲で刺激をすれば、ある程度の効果が見込まれますが、人によって最も有効なポイントは異なります。<br>
+    </div>
+    <section class="beginner-what-is-answer">
+      <div class="beginner-what-is-answer-bluelite">
+        <div class="beginner-what-is-answer-img left-side">
+          <%= image_tag 'beginner/beginner_answer_image_01.jpg' %>
+          <p class="beginner-what-is-answer-cat">鍼灸治療ってホントに効果があるのか</p>
+        </div>
+        <div class="beginner-what-is-answer-contents">
+          <span class="wei-bold">もちろんあります！！</span><br>
+          <br>
+          今や鍼灸治療は、日本や中国、韓国だけで盛んな治療法ではありません。<br>
+          <br>
+          むしろ、西洋医学の中心である欧米諸国が、国家レベルで注目している治療法なのです。<br>
+          <br>
+          事実、アメリカでは<span class="wei-bold">NIH(国立衛生研究所)</span>が、
+          ドイツでは<span class="wei-bold">BMG(連邦保健省)</span>が、
+          イギリスでは<span class="wei-bold">医師会</span>が、
+          そして世界で<span class="wei-bold">WHO(世界保健機関)</span>はが鍼灸の有効性を認めています。
+        </div>
+      </div>
+      <div class="beginner-what-is-answer-blue">
+        <div class="beginner-what-is-answer-img right-side">
+          <%= image_tag 'beginner/beginner_answer_image_02.jpg' %>
+          <p class="beginner-what-is-answer-cat">鍼灸のメカニズム</p>
+        </div>
+        <div class="beginner-what-is-answer-contents">
+          <span class="wei-bold">各国で研究が進められています</span><br>
+          <br>
+          以下のようなメカニズムがあることが研究で分かっています。<br>
+          <br>
+          １．体に備わった鎮痛システムの活性化<br>
+          ２．筋緊張の緩和<br>
+          ３．血流の改善<br>
+          ４．自律神経系の調整<br>
+          ５．免疫系の活性化
+        </div>
+      </div>
+      <div class="beginner-what-is-answer-bluelite">
+        <div class="beginner-what-is-answer-img left-side">
+          <%= image_tag 'beginner/beginner_answer_image_03.jpg' %>
+          <p class="beginner-what-is-answer-cat">鍼灸はどんな症状に効くの？</p>
+        </div>
+        <div class="beginner-what-is-answer-contents">
+          <span class="wei-bold">WHOは、43もの疾患に鍼灸が有効であると発表しています。</span><br>
+          <br>
+          特に、ストレスによる症状や原因の特定できない症状、
+          慢性的な症状など、西洋医学が苦手としている分野で鍼灸治療は積極的に導入されています。<br>
+          <br>
+          鍼灸が病気そのものを攻撃・除去するのではなく、本来体に備わっている
+          <span class="wei-bold">「治ろうとする力(自然治癒力)」</span>、
+          <span class="wei-bold">「抵抗しようとする力(免疫力)」</span>、
+          そして<span class="wei-bold">「健康な状態でいようとする力(恒常性)」</span>
+          を引き出すからです。<br>
+          <br>
+          そのため、頭痛で鍼灸治療を受けていたら肩こりや便秘も解消した、
+          鍼灸を受け始めたら風邪をひかなくなった、といったことが鍼灸ではよく起こります。
+        </div>
+      </div>
+      <div class="beginner-what-is-answer-blue">
+        <div class="beginner-what-is-answer-img right-side">
+          <%= image_tag 'beginner/beginner_answer_image_04.jpg' %>
+          <p class="beginner-what-is-answer-cat">東洋医学の考え方</p>
+        </div>
+        <div class="beginner-what-is-answer-contents">
+          <span class="wei-bold">古代中国で生まれた考え方で、約2000年の歴史をもちます。</span><br>
+          <br>
+          鍼灸は2,000年以上の歴史の中で、実際に試してみてその反応を見る、
+          といった繰り返しによってノウハウが体系化された医学です。<br>
+          <br>
+          例えば、女性であれば月経を整えることが重要であり、
+          消耗の激しい胃腸や滞りやすい下肢の血行を良くすることが重要である、
+          ということが経験則によって分かっています。
+          そして、それらをどう整えるかもノウハウとして蓄積されているのです。<br>
+          <br>
+          そんな鍼灸医学を含む、東洋医学全体の思想としては
+          「陰陽」や「気血水」などが基本的な哲学となっています。
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

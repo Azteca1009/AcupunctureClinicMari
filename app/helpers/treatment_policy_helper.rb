@@ -1,0 +1,2 @@
+module TreatmentPolicyHelper
+end

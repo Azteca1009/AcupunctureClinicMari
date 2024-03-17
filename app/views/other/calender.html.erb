@@ -1,0 +1,186 @@
+<%= stylesheet_link_tag "other/calender", :media => "all" %>
+<div class="mod-mainContent">
+  <section class="other-calender">
+    <h2 class="other-calender-h">CALENDER</h2>
+    <div class="wrapin other-calender-in">
+      <!-- 今月カレンダー -->
+      <section class="other-calender-sec">
+        <table class="calender">
+          <!-- 休館日の年月 -->
+          <caption><%= @nowMonth %></caption>
+          <!-- 休館日の曜日 -->
+          <thead>
+            <tr>
+              <% @week.each do |day| %>
+              <th><%= day %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <!-- 休館日の曜日 -->
+          <tbody>
+            <% num = 1 %>
+            <% firstWeekDayFlg = true %>
+            <% hoidayDayFlg = false %>
+            <%# その月の週分回す %>
+            <% @nowMonthWeekNum.times do %>
+            <tr>
+              <%# 1週間分ループ %>
+              <% for week_Day in 0..6 do %>
+                <%# 最初の週 %>
+                <% if firstWeekDayFlg == true then %>
+                  <%# 今月の始まりの曜日なら %>
+                  <% if @nowMonthFirstWeekDay == week_Day then %>
+                    <%# 今月の休みだけループ %>
+                    <% for hoidayDay in @nowMonthHoliday do %>
+                      <%# もし、休みの日が指定されていたのなら %>
+                      <% if hoidayDay[:date_holiday].day == num then %>
+                        <%# 休日です %>
+                        <td class="holiday"><%= num %></td>
+                        <% hoidayDayFlg = true %>
+                      <% end %>
+                    <% end %>
+                    <%# もし、休みの日が指定されていなければ %>
+                    <% if hoidayDayFlg == false then %>
+                      <%# 休館日かどうかで表示させるtdを変更 %>
+                      <% if @holidayWeek[week_Day] == 0 then %>
+                        <td class="holiday"><%= num %></td>
+                      <% else %>
+                        <td><%= num %></td>
+                      <% end %>
+                    <% end %>
+                    <% hoidayDayFlg = false %>
+                    <% num += 1 %>
+                    <% firstWeekDayFlg = false %>
+                  <% else %>
+                    <td></td>
+                  <% end %>
+                <%# それ以降の週 %>
+                <% else %>
+                  <%# 今月の最後の日を超えていなければ %>
+                  <% if @nowMonthLastDay + 1 > num then %>
+                    <%# 今月の休み分だけループ %>
+                    <% for hoidayDay in @nowMonthHoliday do %>
+                      <%# もし、休みの日が指定されていたのなら %>
+                      <% if hoidayDay[:date_holiday].day == num then %>
+                        <%# 休日です %>
+                        <td class="holiday"><%= num %></td>
+                        <% hoidayDayFlg = true %>
+                      <% end %>
+                    <% end %>
+                    <%# もし、休みの日が指定されていなければ %>
+                    <% if hoidayDayFlg == false then %>
+                      <%# 休館日かどうかで表示させるtdを変更 %>
+                      <% if @holidayWeek[week_Day] == 1 then %>
+                        <td class="half_holiday"><%= num %><br><div>午後休</div></td>
+                      <% elsif @holidayWeek[week_Day] == 2 then %>
+                        <td class="half_holiday"><%= num %><br><div>午前休</div></td>
+                      <% elsif @holidayWeek[week_Day] == 0 then %>
+                        <td class="holiday"><%= num %></td>
+                      <% else %>
+                        <td><%= num %></td>
+                      <% end %>
+                    <% end %>
+                    <% hoidayDayFlg = false %>
+                    <% num += 1 %>
+                  <% else %>
+                    <td></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </section>
+      <!-- 来月カレンダー -->
+      <section class="other-calender-sec">
+        <table class="calender">
+          <!-- 休館日の年月 -->
+          <caption><%= @nextMonth %></caption>
+          <!-- 休館日の曜日 -->
+          <thead>
+            <tr>
+              <% @week.each do |day| %>
+              <th><%= day %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <!-- 休館日の曜日 -->
+          <tbody>
+            <% num = 1 %>
+            <% firstWeekDayFlg = true %>
+            <% hoidayDayFlg = false %>
+            <%# その月の週分回す %>
+            <% @nextMonthWeekNum.times do %>
+            <tr>
+              <%# 1週間分ループ %>
+              <% for week_Day in 0..6 do %>
+                <%# 最初の週 %>
+                <% if firstWeekDayFlg == true then %>
+                  <%# 今月の始まりの曜日なら %>
+                  <% if @nextMonthFirstWeekDay == week_Day then %>
+                    <%# 今月の休みだけループ %>
+                    <% for hoidayDay in @nextMonthHoliday do %>
+                      <%# もし、休みの日が指定されていたのなら %>
+                      <% if hoidayDay[:date_holiday].day == num then %>
+                        <%# 休日です %>
+                        <td class="holiday"><%= num %></td>
+                        <% hoidayDayFlg = true %>
+                      <% end %>
+                    <% end %>
+                    <%# もし、休みの日が指定されていなければ %>
+                    <% if hoidayDayFlg == false then %>
+                      <%# 休館日かどうかで表示させるtdを変更 %>
+                      <% if @holidayWeek[week_Day] == 0 then %>
+                        <td class="holiday"><%= num %></td>
+                      <% else %>
+                        <td><%= num %></td>
+                      <% end %>
+                    <% end %>
+                    <% hoidayDayFlg = false %>
+                    <% num += 1 %>
+                    <% firstWeekDayFlg = false %>
+                  <% else %>
+                    <td></td>
+                  <% end %>
+                <%# それ以降の週 %>
+                <% else %>
+                  <%# 今月の最後の日を超えていなければ %>
+                  <% if @nextMonthLastDay + 1 > num then %>
+                    <%# 今月の休み分だけループ %>
+                    <% for hoidayDay in @nextMonthHoliday do %>
+                      <%# もし、休みの日が指定されていたのなら %>
+                      <% if hoidayDay[:date_holiday].day == num then %>
+                        <%# 休日です %>
+                        <td class="holiday"><%= num %></td>
+                        <% hoidayDayFlg = true %>
+                      <% end %>
+                    <% end %>
+                    <%# もし、休みの日が指定されていなければ %>
+                    <% if hoidayDayFlg == false then %>
+                      <%# 休館日かどうかで表示させるtdを変更 %>
+                      <% if @holidayWeek[week_Day] == 1 then %>
+                        <td class="half_holiday"><%= num %><br><div>午後休</div></td>
+                      <% elsif @holidayWeek[week_Day] == 2 then %>
+                        <td class="half_holiday"><%= num %><br><div>午前休</div></td>
+                      <% elsif @holidayWeek[week_Day] == 0 then %>
+                        <td class="holiday"><%= num %></td>
+                      <% else %>
+                        <td><%= num %></td>
+                      <% end %>
+                    <% end %>
+                    <% hoidayDayFlg = false %>
+                    <% num += 1 %>
+                  <% else %>
+                    <td></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </section>
+</div>

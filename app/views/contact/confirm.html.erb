@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag "contact/contact_confirm", :media => "all" %>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <h2 class="contact-h">
+      <span class="ja">
+        お問い合わせ内容確認
+      </span>
+    </h2>
+    <div class="mod-form">
+      <%= form_for @contact, :url => contact_thanks_path do |f| %>
+        <table class="mod-form-table">
+          <tr>
+            <th>お名前</th>
+            <td>
+              <%= f.hidden_field :name %>
+              <div class="u-input size-100p">
+                <%= simple_format(h(@contact.name)) %>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>
+              <%= f.hidden_field :tel %>
+              <div class="u-input size-100p">
+                <%= @contact.tel %>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td>
+              <%= f.hidden_field :email %>
+              <div class="u-input size-100p">
+                <%= simple_format(h(@contact.email)) %>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>ご年齢</th>
+            <td>
+              <%= f.hidden_field :age %>
+              <div class="u-input size-100p">
+                <%= @contact.age %>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>ご相談内容</th>
+            <td>
+              <%= f.hidden_field :comment %>
+              <div class="u-input size-100p">
+                <%= simple_format(h(@contact.comment)) %>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="mod-btns1col">
+          <div class="mod-btns1col-item">
+            <%= f.submit '送信', :class => 'btn btn-primary mod-btn01 u-bg-c1 u-c-wh' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

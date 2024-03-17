@@ -1,0 +1,213 @@
+// Place all the styles related to the beginner controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mod-keyvisualHead {
+  background-image: url("<%= asset_path('treatment_policy/treatment_policy_image_01.jpg') %>");
+}
+/*治療方針***************/
+.treatment_policy {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.treatment_policy-h .ja {
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.15em;
+}
+/*淺野式と北京堂式治療について***************/
+.treatment_policy-difference {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.treatment_policy-difference-bluelite {
+  background-color: #D9EEF7;
+}
+.treatment_policy-difference-blue {
+  background-color: #BDD7EE;
+}
+.treatment_policy-difference-img {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.treatment_policy-difference-img p {
+  background-color: #fff;
+  font-weight: bold;
+  padding: 0 3px;
+}
+.treatment_policy-difference-contents {
+  text-align: left;
+  font-weight: 500;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.u-c-c1 {
+  font-weight: bold;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*治療方針***************/
+  .treatment_policy {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .treatment_policy-h .ja {
+    font-size: 1.5rem;
+  }
+  .treatment_policy-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  /*淺野式と北京堂式治療について***************/
+  .treatment_policy-difference-bluelite {
+    margin-right: 8em;
+  }
+  .treatment_policy-difference-blue {
+    margin-left: 8em;
+  }
+  .treatment_policy-difference-img {
+    width: 46%;
+    position: relative;
+    margin: 1.5em;
+  }
+  .treatment_policy-difference-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .treatment_policy-difference-contents {
+    width: 46%;
+    line-height: 1.5;
+    margin: 1.5em;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*治療方針***************/
+  .treatment_policy {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .treatment_policy-h .ja {
+    font-size: 1.5rem;
+  }
+  .treatment_policy-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  /*淺野式と北京堂式治療について***************/
+  .treatment_policy-difference-bluelite {
+    margin-right: 8em;
+  }
+  .treatment_policy-difference-blue {
+    margin-left: 8em;
+  }
+  .treatment_policy-difference-img {
+    width: 46%;
+    position: relative;
+    margin: 1.5em;
+  }
+  .treatment_policy-difference-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .treatment_policy-difference-contents {
+    width: 46%;
+    line-height: 1.5;
+    margin: 1.5em;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*治療方針***************/
+  .treatment_policy {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .treatment_policy-h .ja {
+    font-size: 1.5rem;
+  }
+  .treatment_policy-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  /*淺野式と北京堂式治療について***************/
+  .treatment_policy-difference-bluelite {
+    margin-right: 8em;
+  }
+  .treatment_policy-difference-blue {
+    margin-left: 8em;
+  }
+  .treatment_policy-difference-img {
+    width: 46%;
+    position: relative;
+    margin: 1.5em;
+  }
+  .treatment_policy-difference-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .treatment_policy-difference-contents {
+    width: 46%;
+    line-height: 1.5;
+    margin: 1.5em;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*治療方針***************/
+  .treatment_policy {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .treatment_policy-h .ja {
+    font-size: 1.5rem;
+  }
+  .treatment_policy-content {
+    padding: 20px 0 50px;
+    font-weight: 500;
+  }
+  /*淺野式と北京堂式治療について***************/
+  .treatment_policy-difference-bluelite {
+    position: relative;
+    padding-bottom: 2em;
+  }
+  .treatment_policy-difference-blue {
+    position: relative;
+    padding-bottom: 2em;
+  }
+
+  .treatment_policy-difference-img p {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    font-size: 1.1em;
+  }
+  .treatment_policy-difference-contents {
+    display: block;
+    text-align: left;
+    padding: 1em;
+  }
+}

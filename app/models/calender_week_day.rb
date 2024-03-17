@@ -1,0 +1,2 @@
+class CalenderWeekDay < ApplicationRecord
+end

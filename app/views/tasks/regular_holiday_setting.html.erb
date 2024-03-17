@@ -1,0 +1,175 @@
+<%= stylesheet_link_tag "tasks/regular_holiday_setting", :media => "all" %>
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <h2 class="regular_holiday_setting-h">
+      <span class="ja">
+        SCHEDULE
+      </span>
+    </h2>
+    <section class="home-schedule">
+      <div class="home-schedule-head">
+        <h2 class="home-info-h">変更したい定休日を選択してください。変更した内容で問題ないようでしたら登録を押してください。</h2>
+      </div>
+      <table class="mod-schedule-table">
+        <tbody>
+          <tr>
+            <th></th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+            <th>日</th>
+          </tr>
+          <tr>
+            <td class="tal">9:30 - 13:00</td>
+            <% if @calenderHolidaySchedule[:monday] == 1 or @calenderHolidaySchedule[:monday] == 3 then %>
+              <td class="open" id="am_Mon">〇</td>
+              <% am_Mon = 1 %>
+            <% else %>
+              <td class="close" id="am_Mon">ー</td>
+              <% am_Mon = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:tueday] == 1 or @calenderHolidaySchedule[:tueday] == 3 then %>
+              <td class="open" id="am_Tue">〇</td>
+              <% am_Tue = 1 %>
+            <% else %>
+              <td class="close" id="am_Tue">ー</td>
+              <% am_Tue = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:wendnesday] == 1 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+              <td class="open" id="am_Wed">〇</td>
+              <% am_Wed = 1 %>
+            <% else %>
+              <td class="close" id="am_Wed">ー</td>
+              <% am_Wed = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:thursday] == 1 or @calenderHolidaySchedule[:thursday] == 3 then %>
+              <td class="open" id="am_Thu">〇</td>
+              <% am_Thu = 1 %>
+            <% else %>
+              <td class="close" id="am_Thu">ー</td>
+              <% am_Thu = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:friday] == 1 or @calenderHolidaySchedule[:friday] == 3 then %>
+              <td class="open" id="am_Fri">〇</td>
+              <% am_Fri = 1 %>
+            <% else %>
+              <td class="close" id="am_Fri">ー</td>
+              <% am_Fri = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:saturday] == 1 or @calenderHolidaySchedule[:saturday] == 3 then %>
+              <td class="open" id="am_Sat">〇</td>
+              <% am_Sat = 1 %>
+            <% else %>
+              <td class="close" id="am_Sat">ー</td>
+              <% am_Sat = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:sunday] == 1 or @calenderHolidaySchedule[:sunday] == 3 then %>
+              <td class="open" id="am_Sun">〇</td>
+              <% am_Sun = 1 %>
+            <% else %>
+              <td class="close" id="am_Sun">ー</td>
+              <% am_Sun = 0 %>
+            <% end %>
+          </tr>
+          <tr>
+            <td class="tal">14:30 - 19:00</td>
+            <% if @calenderHolidaySchedule[:monday] == 2 or @calenderHolidaySchedule[:monday] == 3 then %>
+              <td class="open" id="pm_Mon">〇</td>
+              <% pm_Mon = 2 %>
+            <% else %>
+              <td class="close" id="pm_Mon">ー</td>
+              <% pm_Mon = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:tueday] == 2 or @calenderHolidaySchedule[:tueday] == 3 then %>
+              <td class="open" id="pm_Tue">〇</td>
+              <% pm_Tue = 2 %>
+            <% else %>
+              <td class="close" id="pm_Tue">ー</td>
+              <% pm_Tue = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:wendnesday] == 2 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+              <td class="open" id="pm_Wed">〇</td>
+              <% pm_Wed = 2 %>
+            <% else %>
+              <td  class="close" id="pm_Wed">ー</td>
+              <% pm_Wed = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:thursday] == 2 or @calenderHolidaySchedule[:thursday] == 3 then %>
+              <td class="open" id="pm_Thu">〇</td>
+              <% pm_Thu = 2 %>
+            <% else %>
+              <td class="close" id="pm_Thu">ー</td>
+              <% pm_Thu = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:friday] == 2 or @calenderHolidaySchedule[:friday] == 3 then %>
+              <td class="open" id="pm_Fri">〇</td>
+              <% pm_Fri = 2 %>
+            <% else %>
+              <td class="close" id="pm_Fri">ー</td>
+              <% pm_Fri = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:saturday] == 2 or @calenderHolidaySchedule[:saturday] == 3 then %>
+              <td class="open" id="pm_Sat">〇</td>
+              <% pm_Sat = 2 %>
+            <% else %>
+              <td class="close" id="pm_Sat">ー</td>
+              <% pm_Sat = 0 %>
+            <% end %>
+            <% if @calenderHolidaySchedule[:sunday] == 2 or @calenderHolidaySchedule[:sunday] == 3 then %>
+              <td class="open" id="pm_Sun">〇</td>
+              <% pm_Sun = 2 %>
+            <% else %>
+              <td class="close" id="pm_Sun">ー</td>
+              <% pm_Sun = 0 %>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+      <p class="mod-schedule-notes">
+        ※ ー は定休（祝日は不定休）
+      </p>
+    </section>
+    <div class="regular_holiday_setting_input">
+      <%= form_for(:session, url: tasks_regular_holiday_setting_path) do |f| %>
+        <div class="mod-form">
+          <%= f.hidden_field :am_Mon, :value => am_Mon %>
+          <%= f.hidden_field :am_Tue, :value => am_Tue %>
+          <%= f.hidden_field :am_Wed, :value => am_Wed %>
+          <%= f.hidden_field :am_Thu, :value => am_Thu %>
+          <%= f.hidden_field :am_Fri, :value => am_Fri %>
+          <%= f.hidden_field :am_Sat, :value => am_Sat %>
+          <%= f.hidden_field :am_Sun, :value => am_Sun %>
+          <%= f.hidden_field :pm_Mon, :value => pm_Mon %>
+          <%= f.hidden_field :pm_Tue, :value => pm_Tue %>
+          <%= f.hidden_field :pm_Wed, :value => pm_Wed %>
+          <%= f.hidden_field :pm_Thu, :value => pm_Thu %>
+          <%= f.hidden_field :pm_Fri, :value => pm_Fri %>
+          <%= f.hidden_field :pm_Sat, :value => pm_Sat %>
+          <%= f.hidden_field :pm_Sun, :value => pm_Sun %>
+          <div class="mod-form-btns">
+            <div class="mod-btns1col u-mb-1e">
+              <div class="mod-btns1col-item"></div>
+            </div>
+            <div class="mod-btns1col">
+              <div class="mod-btns1col-item">
+                <%= f.submit '登録', class: 'btn btn-primary mod-btn01 u-bg-c1 u-c-wh' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<%= javascript_include_tag 'tasks/regular_holiday_setting', 'data-turbolinks-track': 'reload' %>

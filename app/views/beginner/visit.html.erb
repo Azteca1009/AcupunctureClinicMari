@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag "beginner/visit", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-keyvisualHead align-lb u-c-wh">
+  <h1 class="mod-keyvisualHead-txts">
+    子供のころ、<br>
+    お母さんがかけてくれた手の魔法。<br>
+    そんなやさしい魔法をかけられる場所でありたい。
+  </h1>
+</div>
+<%# パンくずリスト %>
+<nav class="mod-breadcrumb">
+  <ol class="mod-breadcrumb-links lapctbOnly">
+    <li><%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %></li>
+    <li><%= link_to "はじめての方へ", '/beginner', data: {"turbolinks" => false} %></li>
+    <li>ご来院にあたって</li>
+  </ol>
+</nav>
+<%# メインコンテンツ %>
+<div class="mod-mainContent">
+  <div class="beginner-visit wrapin">
+    <h2 class="beginner-visit-h">
+      <span class="ja">
+        完全予約制です。<br>
+        お電話またはメールにてご予約をお願いいたします。
+      </span>
+    </h2>
+    <div class="beginner-visit-content">
+      その際、お名前、電話番号、施術部位について伺います。<br>
+      症状によって背中や腰、お腹などに施術を行う場合もあるため、<br>
+      男性はTシャツやYシャツなどを、女性はワンピースではなくツーピースに別れたお洋服をご着用ください。<br>
+      <br>
+      同様に、施術によってはうつ伏せになることもあるため、お食事は1時間前までにお済ませください。<br>
+      <br>
+      鍼灸治療は赤ちゃんからご高齢の方までどなたにもご利用頂ける、<br>
+      安全で副作用のない治療ですが、以下のような場合はご遠慮いただいております。<br>
+      <br>
+      ・インフルエンザなどの感染症の疑いがある方や高熱の方<br>
+      ・お酒を飲まれた方<br>
+      ・極度の疲労がある方
+    </div>
+  </div>
+  <section class="u-mb-2e">
+    <div class="wrapin wrapin-sp">
+      <div class="mod-contactLinks">
+        <div class="mod-contactLinks-item is-tel">
+          <a href="tel:080-xxxx-xxxx">
+            <dl>
+              <dt>
+                <i><%= image_tag 'header/ico_tel_bu.svg' %></i>
+                080-xxxx-xxxx
+              </dt>
+              <dd>お急ぎの場合はお電話で</dd>
+            </dl>
+          </a>
+        </div>
+        <div class="mod-contactLinks-item is-mail">
+          <a href="/contact" data-turbolinks="false">
+            <dl>
+              <dt>メールによるご予約</dt>
+              <dd>まずはお気軽にご連絡ください</dd>
+            </dl>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

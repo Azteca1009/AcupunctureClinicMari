@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag "tasks/logged_in", :media => "all" %>
+<div class="mod-mainContent">
+  <div class="wrapin wrapin-sp">
+    <h1 class="logged_in_tasks_list_title">タスク一覧</h1>
+    <table class="logged_in_tasks_list_table">
+        <tbody>
+          <tr class="logged_in_tasks_header text_center">
+            <th>タスク名</th>
+            <th>タスク内容</th>
+          </tr>
+          <tr data-link="<%= tasks_regular_holiday_setting_path %>" class="master_settings" >
+              <td class="text_center">定休日設定</td>
+              <td class="text_left">
+                まり鍼灸院の定休日を設定することができます。<br>
+                設定内容は、開院/定休日/午前休/午後休の4つを各曜日に対して設定することが出来ます。
+              </td>
+          </tr>
+          <tr data-link="<%= tasks_specific_holiday_setting_path %>" class="master_settings">
+            <td class="text_center">特別休日設定</td>
+            <td class="text_left">
+              まり鍼灸院の特別休日を設定することができます。<br>
+              特別休日は、カレンダーより指定して休日を設定できます。
+            </td>
+          </tr>
+          <tr data-link="<%= tasks_information_setting_path %>"  class="master_settings">
+            <td class="text_center">INFOMATION設定</td>
+            <td class="text_left">
+              まり鍼灸院のINFOMATIONを設定することができます。<br>
+              設定内容は日付、タイトル、本文となっており、指定された日付に、INFOMATIONを出すことが可能です。<br>
+              ※日付を今日以前に指定した場合、即時反映となります。
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<%= javascript_include_tag 'tasks/tasks', 'data-turbolinks-track': 'reload' %>

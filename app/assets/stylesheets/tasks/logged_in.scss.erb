@@ -1,0 +1,112 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mod-keyvisualHead {
+  background-image: url("<%= asset_path('home/home_image_01.jpg') %>");
+}
+.none {
+  background: #d9eef7;
+}
+/**タスク一覧**/
+.logged_in_tasks_list_title {
+  font-weight: bold;
+}
+.logged_in_tasks_list_table {
+  table-layout: fixed;
+  width: 100%;
+  font-weight: 500;
+}
+.logged_in_tasks_list_table th, .logged_in_tasks_list_table td {
+  border-bottom: 1px solid #E1E5E7;
+}
+.logged_in_tasks_header {
+  background-color: #d9eef7;
+}
+.master_settings:hover {
+  cursor:pointer;
+  background-color: #fff0f5;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*タスク一覧***************/
+  table.logged_in_tasks_list_table {
+    table-layout: fixed;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+  .logged_in_tasks_list_table th, .logged_in_tasks_list_table td {
+    padding: 10px;
+    font-weight: 500;
+  }
+  .logged_in_tasks_list_table h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*タスク一覧***************/
+  table.logged_in_tasks_list_table {
+    table-layout: fixed;
+    width: 100%;
+    font-weight: 500;
+  }
+  .logged_in_tasks_list_table th, .logged_in_tasks_list_table td {
+    padding: 10px;
+    font-weight: 500;
+  }
+  .logged_in_tasks_list_table h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*タスク一覧***************/
+  table.logged_in_tasks_list_table {
+    table-layout: fixed;
+    width: 100%;
+    font-weight: 500;
+  }
+  .logged_in_tasks_list_table th, .logged_in_tasks_list_table td {
+    padding: 10px;
+    font-weight: 500;
+  }
+  .logged_in_tasks_list_table h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*タスク一覧***************/
+  table.logged_in_tasks_list_table {
+    table-layout: fixed;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.5rem;
+  }
+  .logged_in_tasks_list_table th, .logged_in_tasks_list_table td {
+    padding: 10px;
+    font-weight: 500;
+  }
+  .logged_in_tasks_list_table h2 {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,162 @@
+// Place all the styles related to the beginner controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mod-keyvisualHead {
+  background-image: url("<%= asset_path('treatment_policy/treatment_policy_image_02.jpg') %>");
+}
+/*痛い鍼はヘタなのか***************/
+.treatment_policy-reverberation {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.treatment_policy-reverberation-h .ja {
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.15em;
+}
+.u-c-c1 {
+  font-weight: bold;
+}
+
+/* 画面サイズ変更対応 ****************************************/
+/***********************************************************/
+/* width1299px以上の画面                                    */
+/***********************************************************/
+@media screen and (min-width: 1299px) {
+  /*痛い鍼はヘタなのか***************/
+  .treatment_policy-reverberation {
+  }
+  .treatment_policy-reverberation-h .ja {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .treatment_policy-reverberation-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+    overflow: hidden;
+  }
+  .treatment_policy-reverberation-space {
+    float: left;
+    height: 20em;
+  }
+  .treatment_policy-reverberation-img-right {
+    float: right;
+    clear: both;
+  }
+  .treatment_policy-reverberation-space2 {
+    float: left;
+    height: 44em;
+  }
+  .treatment_policy-reverberation-img-left {
+    float: left;
+    clear: both;
+    width: 50%;
+  }
+}
+
+/***********************************************************/
+/* width1025px以上1299px以下の画面（プリント設定）            */
+/***********************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1025px), print {
+  /*痛い鍼はヘタなのか***************/
+  .treatment_policy-reverberation {
+  }
+  .treatment_policy-reverberation-h .ja {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .treatment_policy-reverberation-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  .treatment_policy-reverberation-space {
+    float: left;
+    height: 20em;
+  }
+  .treatment_policy-reverberation-img-right {
+    float: right;
+    clear: both;
+  }
+  .treatment_policy-reverberation-space2 {
+    float: left;
+    height: 48em;
+  }
+  .treatment_policy-reverberation-img-left {
+    float: left;
+    clear: both;
+    width: 50%;
+  }
+}
+
+/***********************************************************/
+/* width800px以上1024px以下の画面                           */
+/***********************************************************/
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  /*痛い鍼はヘタなのか***************/
+  .treatment_policy-reverberation {
+  }
+  .treatment_policy-reverberation-h .ja {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .treatment_policy-reverberation-content {
+    padding: 40px 0 80px;
+    font-weight: 500;
+  }
+  .treatment_policy-reverberation-space {
+    float: left;
+    height: 20em;
+  }
+  .treatment_policy-reverberation-img-right {
+    float: right;
+    clear: both;
+    width: 50%;
+  }
+  .treatment_policy-reverberation-space2 {
+    float: left;
+    height: 30em;
+  }
+  .treatment_policy-reverberation-img-left {
+    float: left;
+    clear: both;
+    width: 50%;
+  }
+}
+
+/***********************************************************/
+/* width800px以下の画面                                     */
+/***********************************************************/
+@media screen and (max-width: 800px) {
+  /*痛い鍼はヘタなのか***************/
+  .treatment_policy-reverberation {
+    padding-top: 50px;
+  }
+  .treatment_policy-reverberation-h .ja {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .treatment_policy-reverberation-content {
+    padding: 20px 0 50px;
+    font-weight: 500;
+  }
+  .treatment_policy-reverberation-space {
+    float: left;
+    height: 28em;
+  }
+  .treatment_policy-reverberation-img-right {
+    float: right;
+    clear: both;
+    width: 100%;
+  }
+  .treatment_policy-reverberation-space2 {
+    float: left;
+    height: 47em;
+  }
+  .treatment_policy-reverberation-img-left {
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+}
