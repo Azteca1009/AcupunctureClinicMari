@@ -70,3 +70,17 @@ gem "sassc-rails"
 
 # jQuery用
 gem 'jquery-rails'
+
+# ハッシュ化用
+gem 'bcrypt'
+
+# 日本の祝日
+gem 'holiday_jp'
+
+gem 'webpacker', '~> 5.4', '>= 5.4.4'
+
+# 環境変数設定用
+gem 'dotenv-rails'
+
+# cronの設定を簡単に行えるライブラリ
+gem 'whenever'

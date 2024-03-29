@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # ホーム画面(最初にアクセスしたときのビューの指定)
-  root 'home#index'
+  root 'home#index'                                                                         # ホーム画面
 
   # はじめての方へ #
   get '/beginner',                                  to: 'beginner#index'                    # 鍼灸治療とは
@@ -49,5 +49,11 @@ Rails.application.routes.draw do
   get     '/tasks/information_setting',             to: 'tasks#information_setting'         # INFORMATION設定
   post    '/tasks/information_setting',             to: 'tasks#set_information'             # INFORMATION設定(データ登録処理)
   delete  '/tasks/information_setting',             to: 'tasks#destroy_information'         # INFORMATION設定(データ消去処理)
+
+  # 404/500系エラー対応 #
+  # ★★★これは一番下に設定しないとおかしなことになるよ！！★★★
+  #get '*not_found' => 'application#routing_error'
+  #post '*not_found' => 'application#routing_error'
+  # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
 end

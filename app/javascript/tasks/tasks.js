@@ -3,7 +3,6 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(function() {
-
   // trが押されたなら
   $("tr[data-link]").click(function() {
     window.location.href = $(this).data("link");

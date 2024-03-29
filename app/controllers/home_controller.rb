@@ -69,7 +69,7 @@ class HomeController < ApplicationController
   #####################################
   def getHolidayWeek
     cWeekDay = CalenderWeekDay.find(1)
-    holidayWeeks = [cWeekDay[:sunday],cWeekDay[:monday],cWeekDay[:tueday],cWeekDay[:wendnesday],cWeekDay[:thursday],cWeekDay[:friday],cWeekDay[:saturday]]
+    holidayWeeks = [cWeekDay[:sunday],cWeekDay[:monday],cWeekDay[:tuesday],cWeekDay[:wednesday],cWeekDay[:thursday],cWeekDay[:friday],cWeekDay[:saturday]]
     return holidayWeeks
   end
 end

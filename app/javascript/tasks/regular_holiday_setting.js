@@ -3,7 +3,6 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(function() {
-
   // trが押されたなら
   $("td").click(function() {
     // IDとCLASSを取得
@@ -28,5 +27,4 @@ $(function() {
       }
     }
   });
-
 });

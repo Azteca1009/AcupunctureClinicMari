@@ -22,7 +22,7 @@
     </h2>
     <%# お問い合わせフォーム %>
     <div class="contact_form_input">
-      <%= form_for @contact, :class => 'contact-form-input-post', :url => contact_confirm_path do |f| %>
+      <%= form_with(model: @contact, url: contact_confirm_path) do |f| %>
         <div class="mod-form">
           <%# 入力エラー %>
           <% if @contact.errors.any? %>

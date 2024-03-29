@@ -1,4 +1,8 @@
 <%= stylesheet_link_tag "tasks/regular_holiday_setting", :media => "all" %>
+<script type="module">
+  import "regular_holiday_setting";
+  import "tasks";
+</script>
 <div class="mod-mainContent">
   <div class="wrapin wrapin-sp">
     <h2 class="regular_holiday_setting-h">
@@ -31,14 +35,14 @@
               <td class="close" id="am_Mon">ー</td>
               <% am_Mon = 0 %>
             <% end %>
-            <% if @calenderHolidaySchedule[:tueday] == 1 or @calenderHolidaySchedule[:tueday] == 3 then %>
+            <% if @calenderHolidaySchedule[:tuesday] == 1 or @calenderHolidaySchedule[:tuesday] == 3 then %>
               <td class="open" id="am_Tue">〇</td>
               <% am_Tue = 1 %>
             <% else %>
               <td class="close" id="am_Tue">ー</td>
               <% am_Tue = 0 %>
             <% end %>
-            <% if @calenderHolidaySchedule[:wendnesday] == 1 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+            <% if @calenderHolidaySchedule[:wednesday] == 1 or @calenderHolidaySchedule[:wednesday] == 3 then %>
               <td class="open" id="am_Wed">〇</td>
               <% am_Wed = 1 %>
             <% else %>
@@ -83,14 +87,14 @@
               <td class="close" id="pm_Mon">ー</td>
               <% pm_Mon = 0 %>
             <% end %>
-            <% if @calenderHolidaySchedule[:tueday] == 2 or @calenderHolidaySchedule[:tueday] == 3 then %>
+            <% if @calenderHolidaySchedule[:tuesday] == 2 or @calenderHolidaySchedule[:tuesday] == 3 then %>
               <td class="open" id="pm_Tue">〇</td>
               <% pm_Tue = 2 %>
             <% else %>
               <td class="close" id="pm_Tue">ー</td>
               <% pm_Tue = 0 %>
             <% end %>
-            <% if @calenderHolidaySchedule[:wendnesday] == 2 or @calenderHolidaySchedule[:wendnesday] == 3 then %>
+            <% if @calenderHolidaySchedule[:wednesday] == 2 or @calenderHolidaySchedule[:wednesday] == 3 then %>
               <td class="open" id="pm_Wed">〇</td>
               <% pm_Wed = 2 %>
             <% else %>
@@ -162,8 +166,6 @@
         </div>
       <% end %>
     </div>
-
-
     <br>
     <br>
     <br>

@@ -9,13 +9,15 @@ class ContactController < ApplicationController
   def confirm
     # 入力値のチェック
     @contact = Contact.new(contact_params)
-    # パラメータがある？
-    if @contact.valid?
-      # OK 確認画面を表示
-      render :action => 'confirm'
-    else
-      # NG 入力画面を再表示
-      render :action => 'index'
+    respond_to do |format|
+      # パラメータがある？
+      if @contact.valid?
+        # OK 確認画面を表示
+        format.html { render :confirm, status: :unprocessable_entity }
+      else
+        # NG 入力画面を再表示
+        format.html { render :index, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -25,8 +27,10 @@ class ContactController < ApplicationController
     @contact = Contact.new(contact_params)
     # メール送信
     ContactMailer.received_email(@contact).deliver
-    # 完了画面を表示
-    render :action => 'thanks'
+    respond_to do |format|
+      # 完了画面を表示
+      format.html { render :thanks, status: :unprocessable_entity }
+    end
   end
 private
   def contact_params

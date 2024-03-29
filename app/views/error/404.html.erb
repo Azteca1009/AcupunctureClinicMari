@@ -1,0 +1,90 @@
+<%= stylesheet_link_tag "error/404", :media => "all" %>
+<%# 画面上部イメージ %>
+<div class="mod-catHead01">
+  <h1 class="mod-catHead01-h">
+    お探しのページが見つかりません
+  </h1>
+</div>
+<%# パンくずリスト %>
+<nav class="mod-breadcrumb">
+  <ol class="mod-breadcrumb-links lapctbOnly">
+    <li><%= link_to "まり鍼灸院", root_path, data: {"turbolinks" => false} %></li>
+    <li>お探しのページが見つかりません</li>
+  </ol>
+</nav>
+<%# ページリスト %>
+<div class="wrapin wrapin-sp">
+  <div class="error-404">
+    <div class="error-404-contents">
+      <section class="error-404-sec">
+        <div class="error-404-sec-title">
+          <%= link_to "はじめての方へ", beginner_path, data: {"turbolinks" => false} %>
+        </div>
+        <ul class="error-404-sec-list-ul">
+          <li class="error-404-sec-list-li">
+            <%= link_to "鍼灸治療とは", beginner_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+          <li class="error-404-sec-list-li">
+            <%= link_to "当院で使用している鍼について", root_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+          <li class="error-404-sec-list-li">
+            <%= link_to "ご来院にあたって", beginner_visit_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+          <li class="error-404-sec-list-li">
+            <%= link_to "施術者紹介", beginner_self_introduction_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+        </ul>
+      </section>
+      <section class="error-404-sec">
+        <div class="error-404-sec-title">
+          <%= link_to "施術のながれ", procedure_flow_path, data: {"turbolinks" => false} %>
+        </div>
+        <ul class="error-404-sec-list-ul">
+          <li class="error-404-sec-list-li">
+            <%= link_to "施術のながれ", procedure_flow_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="error-404-contents">
+      <section class="error-404-sec">
+        <div class="error-404-sec-title">
+          <%= link_to "治療方針", treatment_policy_path, data: {"turbolinks" => false} %>
+        </div>
+        <ul class="error-404-sec-list-ul">
+          <li class="error-404-sec-list-li">
+            <%= link_to "こんな症状にお悩みなら", treatment_policy_faq_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+          <li class="error-404-sec-list-li">
+            <%= link_to "ライフスタイルに合わせた治療方針", root_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+          <li class="error-404-sec-list-li">
+            <%= link_to "痛い鍼はヘタなのか", treatment_policy_reverberation_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+        </ul>
+      </section>
+      <section class="error-404-sec">
+        <div class="error-404-sec-title">
+          <%= link_to "料金一覧", root_path, data: {"turbolinks" => false} %>
+        </div>
+        <ul class="error-404-sec-list-ul">
+          <li class="error-404-sec-list-li">
+            <%= link_to "料金一覧", root_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="error-404-contents">
+      <section class="error-404-sec">
+        <div class="error-404-sec-title">
+          <%= link_to "お問い合わせ", contact_path, data: {"turbolinks" => false} %>
+        </div>
+        <ul class="error-404-sec-list-ul">
+          <li class="error-404-sec-list-li">
+            <%= link_to "お問い合わせ", contact_path, data: {"turbolinks" => false}, class:"u-c-c1" %>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
